@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "atmospheric"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    "DED",
+    "FFF"
+  ],
+  "key": {
+    "A": {
+      "item": "upgrade_aquatic:mulberry_jam_bottle"
+    },
+    "B": {
+      "item": "minecraft:honey_bottle"
+    },
+    "C": {
+      "item": "atmospheric:yucca_juice"
+    },
+    "D": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "tag": "forge:milk"
+    },
+    "F": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "irregularchef:traffic_jam_roll",
+    "count": 3
+  }
+}

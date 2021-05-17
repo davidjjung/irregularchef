@@ -1,0 +1,43 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "upgrade_aquatic:cooked_pike"
+    },
+    {
+      "tag": "forge:cooked_fishes"
+    },
+    [
+      {
+        "item": "upgrade_aquatic:boiled_blue_pickerelweed"
+      },
+      {
+        "item": "upgrade_aquatic:boiled_purple_pickerelweed"
+      }
+    ],
+    [
+      {
+        "item": "upgrade_aquatic:boiled_blue_pickerelweed"
+      },
+      {
+        "item": "upgrade_aquatic:boiled_purple_pickerelweed"
+      }
+    ],
+    {
+      "item": "upgrade_aquatic:prismarine_rod"
+    },
+    {
+      "item": "upgrade_aquatic:prismarine_rod"
+    }
+  ],
+  "result": {
+    "item": "irregularchef:pool_party_stick",
+    "count": 2
+  }
+}

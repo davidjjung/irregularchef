@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "bites=0": { "model": "irregularchef:block/turkey_pot_pie" },
+    "bites=1": { "model": "irregularchef:block/turkey_pot_pie_slice1" },
+    "bites=2": { "model": "irregularchef:block/turkey_pot_pie_slice2" },
+    "bites=3": { "model": "irregularchef:block/turkey_pot_pie_slice3" }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "environmental"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "autumnity"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    "DED"
+  ],
+  "key": {
+    "A": {
+      "item": "upgrade_aquatic:mulberry"
+    },
+    "B": {
+      "item": "autumnity:syrup_bottle"
+    },
+    "C": {
+      "item": "environmental:cherries"
+    },
+    "D": {
+      "item": "minecraft:wheat"
+    },
+    "E": {
+      "item": "minecraft:charcoal"
+    }
+  },
+  "result": {
+    "item": "irregularchef:charcoal_waffles",
+    "count": 2
+  }
+}

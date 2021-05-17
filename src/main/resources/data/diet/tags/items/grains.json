@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [  ],
+  "optional": [
+    "irregularchef:turkey_pot_pie_slice",
+    "irregularchef:traffic_jam_roll",
+    "irregularchef:charcoal_waffles",
+    "irregularchef:turtle_gallimaufry"
+  ]
+}

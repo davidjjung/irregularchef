@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "atmospheric"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "endergetic"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "atmospheric:aloe_kernels"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "endergetic:bolloom_fruit"
+    }
+  ],
+  "result": {
+    "item": "irregularchef:purple_cow_float"
+  }
+}

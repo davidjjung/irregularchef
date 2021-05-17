@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:raw_beef"
+    },
+    {
+      "item": "farmersdelight:minced_beef"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "tag": "forge:crops/tomato"
+    },
+    {
+      "tag": "forge:fruits/banana"
+    }
+  ],
+  "result": {
+    "item": "irregularchef:steamed_beef_wrap"
+  },
+  "container": {
+    "item": "neapolitan:small_banana_frond"
+  },
+  "cookingtime": 300
+}

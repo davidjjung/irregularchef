@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [  ],
+  "optional": [
+    "irregularchef:traffic_jam_roll",
+    "irregularchef:purple_cow_float",
+    "irregularchef:birds_nest_soup",
+    "irregularchef:charcoal_waffles",
+    "irregularchef:dirt_cup"
+  ]
+}

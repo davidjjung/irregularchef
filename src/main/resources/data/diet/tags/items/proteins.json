@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [  ],
+  "optional": [
+    "irregularchef:steamed_beef_wrap",
+    "irregularchef:turkey_pot_pie_slice",
+    "irregularchef:hunters_casserole",
+    "irregularchef:turtle_gallimaufry",
+    "irregularchef:birds_nest_soup",
+    "irregularchef:pool_party_stick"
+  ]
+}

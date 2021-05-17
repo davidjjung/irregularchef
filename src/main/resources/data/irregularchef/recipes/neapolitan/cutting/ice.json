@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:ice"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool",
+    "tool": "pickaxe"
+  },
+  "result": [
+    {
+      "item": "neapolitan:ice_cubes",
+      "count": 4
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ]
+}

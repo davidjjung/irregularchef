@@ -1,0 +1,40 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "block/block",
+  "textures": {
+    "particle": "irregularchef:block/turtle_gallimaufry_bottom",
+    "bottom": "irregularchef:block/turtle_gallimaufry_bottom",
+    "details": "irregularchef:block/turtle_gallimaufry_details",
+    "side": "irregularchef:block/turtle_gallimaufry_side",
+    "top": "irregularchef:block/turtle_gallimaufry_top_eaten"
+  },
+  "elements": [
+
+    {
+      "name": "gallimaufry",
+      "from": [4, 7, 4],
+      "to": [12, 9, 12],
+      "faces": {
+        "north": {"uv": [6, 4, 14, 6], "rotation": 180, "texture": "#details"},
+        "east": {"uv": [12, 4, 14, 12], "rotation": 90, "texture": "#details"},
+        "south": {"uv": [6, 10, 14, 12], "texture": "#details"},
+        "west": {"uv": [6, 4, 8, 12], "rotation": 270, "texture": "#details"},
+        "up": {"uv": [6, 4, 14, 12], "texture": "#details"},
+        "down": {"uv": [6, 4, 14, 12], "texture": "#details"}
+      }
+    },
+    {
+      "name": "pumpkin",
+      "from": [2, 0, 2],
+      "to": [14, 8, 14],
+      "faces": {
+        "north": {"uv": [2, 8, 14, 16], "texture": "#side"},
+        "east": {"uv": [2, 8, 14, 16], "texture": "#side"},
+        "south": {"uv": [2, 8, 14, 16], "texture": "#side"},
+        "west": {"uv": [2, 8, 14, 16], "texture": "#side"},
+        "up": {"uv": [2, 2, 14, 14], "texture": "#top"},
+        "down": {"uv": [2, 2, 14, 14], "texture": "#bottom"}
+      }
+    }
+  ]
+}
