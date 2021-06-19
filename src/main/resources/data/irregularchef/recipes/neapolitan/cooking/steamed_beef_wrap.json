@@ -18,7 +18,8 @@
     }
   ],
   "result": {
-    "item": "irregularchef:steamed_beef_wrap"
+    "item": "irregularchef:steamed_beef_wrap",
+    "count": 2
   },
   "container": {
     "item": "neapolitan:small_banana_frond"

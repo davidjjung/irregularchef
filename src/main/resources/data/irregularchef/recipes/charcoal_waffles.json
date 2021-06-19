@@ -2,10 +2,6 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "environmental"
-    },
-    {
-      "type": "forge:mod_loaded",
       "modid": "upgrade_aquatic"
     },
     {
@@ -15,7 +11,7 @@
   ],
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ABC",
+    "ABA",
     "DED"
   ],
   "key": {
@@ -24,9 +20,6 @@
     },
     "B": {
       "item": "autumnity:syrup_bottle"
-    },
-    "C": {
-      "item": "environmental:cherries"
     },
     "D": {
       "item": "minecraft:wheat"
