@@ -2,16 +2,13 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "item": "environmental:venison"
-    },
-    {
-      "item": "minecraft:rabbit"
+      "tag": "irregularchef:prey_items"
     },
     {
       "item": "minecraft:carrot"
     },
     {
-      "item": "minecraft:spider_eye"
+      "item": "farmersdelight:tomato_sauce"
     },
     {
       "item": "minecraft:red_mushroom"

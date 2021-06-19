@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cooked_rabbit",
+    "minecraft:spider_eye"
+  ],
+  "optional": [
+    "environmental:cooked_venison"
+  ]
+}
