@@ -8,6 +8,9 @@
       "item": "minecraft:carrot"
     },
     {
+      "item": "minecraft:spider_eye"
+    },
+    {
       "item": "farmersdelight:tomato_sauce"
     },
     {
@@ -20,11 +23,5 @@
   "container": {
     "item": "minecraft:bowl"
   },
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "environmental"
-    }
-  ],
   "cookingtime": 200
 }

@@ -57,16 +57,19 @@ public class IrregularChefItems {
 			new Item.Properties().food(Foods.POOL_PARTY_STICK).containerItem(getCompatItem(IrregularChefCompat.CompatMods.UPGRADE_AQUATIC,
 					IrregularChefCompat.CompatItems.PRISMARINE_ROD).get()).group(ItemGroup.FOOD)));
 
-	public static final RegistryObject<Item> HUNTERS_CASSEROLE = HELPER.createItem("hunters_casserole", () -> new ConsumableItem(
+	public static final RegistryObject<Item> HUNTERS_CASSEROLE = HELPER.createItem("hunters_casserole", () -> new HuntersCasserole(
 			new Item.Properties().food(Foods.HUNTERS_CASSEROLE).group(ItemGroup.FOOD)));
 
 	public static final RegistryObject<Item> CHARCOAL_WAFFLES = HELPER.createItem("charcoal_waffles", () -> new ConsumableItem(
 			new Item.Properties().food(Foods.CHARCOAL_WAFFLES).group(ItemGroup.FOOD)));
 
+	public static final RegistryObject<Item> THRASHER_SOUP = HELPER.createItem("thrasher_soup", () -> new ConsumableItem(
+			new Item.Properties().food(Foods.THRASHER_SOUP).group(ItemGroup.FOOD)));
+
 	public static final RegistryObject<Item> TURTLE_GALLIMAUFRY = HELPER.createItem("turtle_gallimaufry", () -> new ConsumableItem(
 			new Item.Properties().food(Foods.TURTLE_GALLIMAUFRY).containerItem(Items.BOWL).maxStackSize(16).group(ItemGroup.FOOD)));
 	public static final RegistryObject<Item> TURTLE_GALLIMAUFRY_BLOCK = HELPER.createItem("turtle_gallimaufry_block", () -> new BlockItem(
-			IrregularChefBlocks.TURTLE_GALLIMAUFRY_BLOCK.get(), new Item.Properties().maxStackSize(1).group(ItemGroup.FOOD)));
+			IrregularChefBlocks.TURTLE_GALLIMAUFRY_BLOCK.get(), new Item.Properties().maxStackSize(1).containerItem(Items.TURTLE_HELMET).group(ItemGroup.FOOD)));
 
 	static class Foods {
 		public static final Food STEAMED_BEEF_WRAP = (new Food.Builder()).hunger(8).saturation(0.8F).effect(() -> new EffectInstance(ModEffects.NOURISHED.get(), 2400), 1.0F).build();
@@ -79,6 +82,7 @@ public class IrregularChefItems {
 		public static final Food PURPLE_COW_FLOAT = (new Food.Builder()).hunger(4).saturation(0.6F).setAlwaysEdible().effect(() -> new EffectInstance(Effects.LEVITATION, 120), 1.0F).build();
 		public static final Food TURTLE_GALLIMAUFRY = (new Food.Builder()).hunger(13).saturation(0.8F).effect(() -> new EffectInstance(Effects.WATER_BREATHING, 1800), 1.0F).effect(() -> new EffectInstance(ModEffects.NOURISHED.get(), 6000), 1.0F).build();
 		public static final Food HUNTERS_CASSEROLE = (new Food.Builder()).hunger(8).saturation(0.6F).effect(() -> new EffectInstance(Effects.INVISIBILITY, 300, 0, true, false), 1.0F).build();
-		public static final Food CHARCOAL_WAFFLES = (new Food.Builder()).hunger(4).saturation(0.8F).effect(() -> new EffectInstance(Effects.WEAKNESS, 600, 0, true, true), 0.7F).effect(() -> new EffectInstance(Effects.FIRE_RESISTANCE, 600, 0, false, true), 1.0F).build();
+		public static final Food CHARCOAL_WAFFLES = (new Food.Builder()).hunger(4).saturation(0.8F).effect(() -> new EffectInstance(Effects.SLOWNESS, 480, 0, true, true), 0.7F).effect(() -> new EffectInstance(Effects.FIRE_RESISTANCE, 500, 0, false, true), 1.0F).build();
+		public static final Food THRASHER_SOUP = (new Food.Builder()).hunger(7).saturation(0.8F).effect(() -> new EffectInstance(Effects.BLINDNESS, 260, 0, true, true), 1.0F).effect(() -> new EffectInstance(Effects.STRENGTH, 300, 2, false, true), 1.0F).build();
 	}
 }

@@ -3,26 +3,12 @@
   "parent": "block/block",
   "textures": {
     "4": "irregularchef:block/turtle_gallimaufry_bottom",
-    "5": "irregularchef:block/turtle_gallimaufry_details",
     "6": "irregularchef:block/turtle_gallimaufry_side",
     "7": "irregularchef:block/turtle_gallimaufry_top",
     "8": "irregularchef:block/turtle_gallimaufry_inside",
     "particle": "irregularchef:block/turtle_gallimaufry_inside"
   },
   "elements": [
-    {
-      "name": "gallimaufry",
-      "from": [4, 1, 4],
-      "to": [12, 11, 12],
-      "faces": {
-        "north": {"uv": [6, 4, 16, 12], "rotation": 90, "texture": "#5"},
-        "east": {"uv": [6, 4, 16, 12], "rotation": 270, "texture": "#5"},
-        "south": {"uv": [6, 4, 16, 12], "rotation": 90, "texture": "#5"},
-        "west": {"uv": [6, 4, 16, 12], "rotation": 270, "texture": "#5"},
-        "up": {"uv": [6, 4, 14, 12], "texture": "#5"},
-        "down": {"uv": [6, 4, 14, 12], "texture": "#missing"}
-      }
-    },
     {
       "name": "long_wall",
       "from": [2, 0, 2],

@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north,servings=0": {
-      "model": "irregularchef:block/turtle_gallimaufry_block_stage3"
+      "model": "irregularchef:block/turtle_gallimaufry_block_leftover"
     },
     "facing=south,servings=0": {
-      "model": "irregularchef:block/turtle_gallimaufry_block_stage3",
+      "model": "irregularchef:block/turtle_gallimaufry_block_leftover",
       "y": 180
     },
     "facing=west,servings=0": {
-      "model": "irregularchef:block/turtle_gallimaufry_block_stage3",
+      "model": "irregularchef:block/turtle_gallimaufry_block_leftover",
       "y": 270
     },
     "facing=east,servings=0": {
-      "model": "irregularchef:block/turtle_gallimaufry_block_stage3",
+      "model": "irregularchef:block/turtle_gallimaufry_block_leftover",
       "y": 90
     },
     "facing=north,servings=1": {
