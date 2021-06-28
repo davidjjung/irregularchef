@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[32,)"
-issueTrackerURL = ""
+issueTrackerURL = "https://github.com/davidjjung/irregularchef/issues"
 license = "MIT License"
 
 [[mods]]
@@ -9,11 +9,10 @@ license = "MIT License"
 #     logoFile = "logo.png"
     itemIcon = "irregularchef:charcoal_waffles"
     authors = "DavigJ"
-    credits = "Big thanks to the MCA template on github"
+    credits = "Thanks to dannyk11 for working on art!"
     displayName = "The Irregular Chef"
     description = '''
-An unofficial compat mod that adds some irregular foods and compat for Team Abnormals, Team Aurora, and Farmer's Delight.
-Other mods may find their way here in the future!
+An unofficial compat mod that adds some irregular foods and compat for Team Abnormals, Team Aurora, Farmer's Delight, and more.
     '''
 
 [[dependencies.irregularchef]]
@@ -43,59 +42,3 @@ Other mods may find their way here in the future!
     versionRange = "[0.4.2,)"
     ordering = "AFTER"
     side = "BOTH"
-
-[[dependencies.irregularchef]]
-modId = "autumnity"
-mandatory = false
-versionRange = "[2.1.1,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.irregularchef]]
-modId = "environmental"
-mandatory = false
-versionRange = "[1.0.0,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.irregularchef]]
-modId = "atmospheric"
-mandatory = false
-versionRange = "[3.1.0,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.irregularchef]]
-modId = "abundance"
-mandatory = false
-versionRange = "[1.0.5,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.irregularchef]]
-modId = "upgrade_aquatic"
-mandatory = false
-versionRange = "[3.1.0,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.irregularchef]]
-modId = "endergetic"
-mandatory = false
-versionRange = "[3.0.0,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.irregularchef]]
-modId = "neapolitan"
-mandatory = false
-versionRange = "[2.1.0,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.irregularchef]]
-modId = "diet"
-mandatory = false
-versionRange = "[0.28,)"
-ordering = "AFTER"
-side = "BOTH"

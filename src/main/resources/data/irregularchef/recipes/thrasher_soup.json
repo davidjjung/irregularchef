@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:pasta"
+    },
+    {
+      "item": "upgrade_aquatic:thrasher_tooth"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "tag": "forge:cooked_duck"
+    }
+  ],
+  "result": {
+    "item": "irregularchef:thrasher_soup"
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 300
+}

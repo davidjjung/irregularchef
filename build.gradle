@@ -66,6 +66,7 @@ sourceSets.main.resources {
 dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
     implementation fg.deobf("com.minecraftabnormals:abnormals-core:${project.minecraft}-${project.abnormalsCore}")
+
     implementation fg.deobf("curse.maven:farmersdelight-398521:3295974")
     implementation fg.deobf("curse.maven:neapolitan-382016:3221772")
     implementation fg.deobf("curse.maven:autumnity-365045:3295700")
@@ -74,9 +75,9 @@ dependencies {
     implementation fg.deobf("curse.maven:atmospheric-362393:3249309")
     implementation fg.deobf("curse.maven:abnormals_delight-442719:3301052")
     implementation fg.deobf("curse.maven:endergetic-291509:3154938")
+    implementation fg.deobf("curse.maven:better_badlands-421763:3195284")
     implementation fg.deobf("curse.maven:upgrade_aquatic-326895:3249419")
     implementation fg.deobf("curse.maven:diet-443570:3300992")
-//    implementation fg.deobf("curse.maven:supplementaries-412082:3281805")
 
     implementation fg.deobf("curse.maven:appleskin-248787:3035787")
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}:${project.jei}:api")

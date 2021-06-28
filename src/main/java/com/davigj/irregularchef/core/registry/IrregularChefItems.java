@@ -4,6 +4,7 @@ import com.davigj.irregularchef.common.item.*;
 import com.davigj.irregularchef.core.other.IrregularChefCompat;
 import com.minecraftabnormals.abnormals_core.core.util.registry.ItemSubRegistryHelper;
 import com.davigj.irregularchef.core.IrregularChef;
+import com.minecraftabnormals.atmospheric.core.registry.AtmosphericBiomes;
 import net.minecraft.item.*;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
@@ -84,5 +85,6 @@ public class IrregularChefItems {
 		public static final Food HUNTERS_CASSEROLE = (new Food.Builder()).hunger(8).saturation(0.6F).effect(() -> new EffectInstance(Effects.INVISIBILITY, 300, 0, true, false), 1.0F).build();
 		public static final Food CHARCOAL_WAFFLES = (new Food.Builder()).hunger(4).saturation(0.8F).effect(() -> new EffectInstance(Effects.SLOWNESS, 480, 0, true, true), 0.7F).effect(() -> new EffectInstance(Effects.FIRE_RESISTANCE, 500, 0, false, true), 1.0F).build();
 		public static final Food THRASHER_SOUP = (new Food.Builder()).hunger(7).saturation(0.8F).effect(() -> new EffectInstance(Effects.BLINDNESS, 260, 0, true, true), 1.0F).effect(() -> new EffectInstance(Effects.STRENGTH, 300, 2, false, true), 1.0F).build();
+
 	}
 }
