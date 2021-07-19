@@ -6,10 +6,8 @@ import com.davigj.irregularchef.core.IrregularChef;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
-import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
-import vectorwing.farmersdelight.blocks.FeastBlock;
 import vectorwing.farmersdelight.blocks.PieBlock;
 
 @Mod.EventBusSubscriber(modid = IrregularChef.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)

@@ -8,6 +8,8 @@ public class IrregularChefCompat {
         public static final String ABUNDANCE = "abundance";
         public static final String AUTUMNITY = "autumnity";
         public static final String BUZZIER_BEES = "buzzier_bees";
+        public static final String ENVIRONMENTAL = "environmental";
+        public static final String ENDERGETIC = "endergetic";
         public static final String NEAPOLITAN = "neapolitan";
         public static final String UPGRADE_AQUATIC = "upgrade_aquatic";
     }

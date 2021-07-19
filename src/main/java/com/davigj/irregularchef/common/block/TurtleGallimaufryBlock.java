@@ -2,6 +2,7 @@ package com.davigj.irregularchef.common.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.monster.HoglinEntity;
 import net.minecraft.item.Item;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
