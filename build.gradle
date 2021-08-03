@@ -79,7 +79,7 @@ dependencies {
 //    implementation fg.deobf("curse.maven:upgrade_aquatic-326895:3249419")
 //    implementation fg.deobf("curse.maven:diet-443570:3300992")
 
-//    implementation fg.deobf("curse.maven:appleskin-248787:3035787")
+    implementation fg.deobf("curse.maven:appleskin-248787:3035787")
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}:${project.jei}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${project.minecraft}:${project.jei}")
 }

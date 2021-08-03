@@ -50,8 +50,8 @@ public class HuntersCasserole extends Item {
             for (PlayerEntity living : entityLiving.world.getEntitiesWithinAABB(PlayerEntity.class, entityLiving.getBoundingBox().grow(15.0D, 4.0D, 15.0D))) {
                 living.addPotionEffect(new EffectInstance(Effects.GLOWING, 150));
             }
-            for (AbstractFishEntity living : entityLiving.world.getEntitiesWithinAABB(AbstractFishEntity.class, entityLiving.getBoundingBox().grow(25.0D, 4.0D, 15.0D))) {
-                living.addPotionEffect(new EffectInstance(Effects.GLOWING, 150));
+            for (AbstractFishEntity living : entityLiving.world.getEntitiesWithinAABB(AbstractFishEntity.class, entityLiving.getBoundingBox().grow(25.0D, 4.0D, 25.0D))) {
+                living.addPotionEffect(new EffectInstance(Effects.GLOWING, 400));
             }
             entityLiving.removePotionEffect(Effects.GLOWING);
             ItemStack itemstack = new ItemStack(Items.BOWL);

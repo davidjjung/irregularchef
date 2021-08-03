@@ -2,7 +2,7 @@
   "parent": "farmersdelight:block/pie",
   "textures": {
     "bottom": "farmersdelight:block/pie_bottom",
-    "side": "farmersdelight:block/pie_side",
+    "side": "irregularchef:block/turkey_pot_pie_side",
     "top": "irregularchef:block/turkey_pot_pie_top"
   }
 }
