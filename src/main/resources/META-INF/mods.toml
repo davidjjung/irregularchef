@@ -5,11 +5,11 @@ license = "MIT License"
 
 [[mods]]
     modId = "irregularchef"
-    version = "1.16.5-1.1.0"
-#     logoFile = "logo.png"
-    itemIcon = "irregularchef:charcoal_waffles"
+    version = "1.16.5-1.0.1"
+    logoFile = "logo.png"
+    itemIcon = "irregularchef:turtle_gallimaufry"
     authors = "DavigJ"
-    credits = "Thanks to dannyk11 for working on art!"
+    credits = "Thanks to dannyk11 for working on art, and Evo's subsequent edits!"
     displayName = "The Irregular Chef"
     description = '''
 An unofficial compat mod that adds some irregular foods and compat for Team Abnormals, Team Aurora, Farmer's Delight, and more.

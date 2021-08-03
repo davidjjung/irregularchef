@@ -61,13 +61,13 @@ public class IrregularChefItems {
                     IrregularChefCompat.CompatItems.PRISMARINE_ROD).get()).group(isModLoaded(IrregularChefCompat.CompatMods.UPGRADE_AQUATIC) ? ItemGroup.FOOD : null)));
 
     public static final RegistryObject<Item> HUNTERS_CASSEROLE = HELPER.createItem("hunters_casserole", () -> new HuntersCasserole(
-            new Item.Properties().food(Foods.HUNTERS_CASSEROLE).group(ItemGroup.FOOD)));
+            new Item.Properties().food(Foods.HUNTERS_CASSEROLE).maxStackSize(16).group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> CHARCOAL_WAFFLES = HELPER.createItem("charcoal_waffles", () -> new ConsumableItem(
             new Item.Properties().food(Foods.CHARCOAL_WAFFLES).group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> THRASHER_SOUP = HELPER.createItem("thrasher_soup", () -> new ConsumableItem(
-            new Item.Properties().food(Foods.THRASHER_SOUP).group(isModLoaded(IrregularChefCompat.CompatMods.UPGRADE_AQUATIC) ? ItemGroup.FOOD : null)));
+            new Item.Properties().food(Foods.THRASHER_SOUP).maxStackSize(16).group(isModLoaded(IrregularChefCompat.CompatMods.UPGRADE_AQUATIC) ? ItemGroup.FOOD : null)));
 
     public static final RegistryObject<Item> TURTLE_GALLIMAUFRY = HELPER.createItem("turtle_gallimaufry", () -> new ConsumableItem(
             new Item.Properties().food(Foods.TURTLE_GALLIMAUFRY).containerItem(Items.BOWL).maxStackSize(16).group(ItemGroup.FOOD)));
