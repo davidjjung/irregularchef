@@ -16,7 +16,6 @@ public class IrregularChefCompat {
 
     public static class CompatEffects {
         public static final ResourceLocation PERSISTENCE = new ResourceLocation(CompatMods.ATMOSPHERIC, "persistence");
-        public static final ResourceLocation GELLED = new ResourceLocation(CompatMods.ATMOSPHERIC, "gelled");
         public static final ResourceLocation VANILLA_SCENT = new ResourceLocation(CompatMods.NEAPOLITAN, "vanilla_scent");
         public static final ResourceLocation SUGAR_RUSH = new ResourceLocation(CompatMods.NEAPOLITAN, "sugar_rush");
         public static final ResourceLocation AGILITY = new ResourceLocation(CompatMods.NEAPOLITAN, "agility");

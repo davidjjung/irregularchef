@@ -17,13 +17,13 @@
   ],
   "key": {
     "A": {
-      "item": "upgrade_aquatic:mulberry_jam_bottle"
+      "item": "upgrade_aquatic:mulberry"
     },
     "B": {
-      "item": "minecraft:honey_bottle"
+      "item": "minecraft:honeycomb"
     },
     "C": {
-      "item": "atmospheric:yucca_juice"
+      "item": "atmospheric:yucca"
     },
     "D": {
       "item": "minecraft:sugar"

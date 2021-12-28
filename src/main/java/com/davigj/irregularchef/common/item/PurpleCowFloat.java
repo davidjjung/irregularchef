@@ -18,12 +18,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class SingleBottledEffect extends Item {
+public class PurpleCowFloat extends Item {
     String modid;
     ResourceLocation effect;
     int duration;
     int amplifier;
-    public SingleBottledEffect(Properties properties, String modid, ResourceLocation effect, int duration, int amplifier) {
+    public PurpleCowFloat(Properties properties) {
         super(properties);
         this.modid = modid;
         this.effect = effect;

@@ -49,9 +49,8 @@ public class IrregularChefItems {
     public static final RegistryObject<Item> TRAFFIC_JAM_ROLL = HELPER.createItem("traffic_jam_roll", () -> new TrafficJamRoll(
             new Item.Properties().food(Foods.TRAFFIC_JAM_ROLL).group((isModLoaded(IrregularChefCompat.CompatMods.UPGRADE_AQUATIC) && isModLoaded(IrregularChefCompat.CompatMods.ATMOSPHERIC)) ? ItemGroup.FOOD : null)));
 
-    public static final RegistryObject<Item> PURPLE_COW_FLOAT = HELPER.createItem("purple_cow_float", () -> new SingleBottledEffect(
-            new Item.Properties().food(Foods.PURPLE_COW_FLOAT).containerItem(Items.GLASS_BOTTLE).maxStackSize(16).group((isModLoaded(IrregularChefCompat.CompatMods.ENDERGETIC) && isModLoaded(IrregularChefCompat.CompatMods.ATMOSPHERIC)) ? ItemGroup.FOOD : null),
-            IrregularChefCompat.CompatMods.ATMOSPHERIC, IrregularChefCompat.CompatEffects.GELLED, 300, 0));
+    public static final RegistryObject<Item> PURPLE_COW_FLOAT = HELPER.createItem("purple_cow_float", () -> new PurpleCowFloat(
+            new Item.Properties().food(Foods.PURPLE_COW_FLOAT).containerItem(Items.GLASS_BOTTLE).maxStackSize(16).group((isModLoaded(IrregularChefCompat.CompatMods.ENDERGETIC) && isModLoaded(IrregularChefCompat.CompatMods.ATMOSPHERIC)) ? ItemGroup.FOOD : null)));
 
     public static final RegistryObject<Item> DIRT_CUP = HELPER.createItem("dirt_cup", () -> new DirtCup(
             new Item.Properties().food(Foods.DIRT_CUP).containerItem(Items.GLASS_BOTTLE).maxStackSize(16).group((isModLoaded(IrregularChefCompat.CompatMods.ENVIRONMENTAL) && isModLoaded(IrregularChefCompat.CompatMods.NEAPOLITAN) && isModLoaded(IrregularChefCompat.CompatMods.UPGRADE_AQUATIC)) ? ItemGroup.FOOD : null)));
