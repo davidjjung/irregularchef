@@ -31,29 +31,29 @@ public class DirtCup extends Item {
         super(properties);
     }
 
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity livingEntity) {
-        super.onItemUseFinish(stack, worldIn, livingEntity);
+    public ItemStack finishUsingItem(ItemStack stack, World worldIn, LivingEntity livingEntity) {
+        super.finishUsingItem(stack, worldIn, livingEntity);
         if (stack.isEmpty()) {
-            if ((!worldIn.isRemote && livingEntity.getPosition().getY() <= 62 && !livingEntity.isInWaterRainOrBubbleColumn()) ||
-                    (!worldIn.isRemote && worldIn.isRainingAt(livingEntity.getPosition()) && !livingEntity.isAirBorne)) {
-                livingEntity.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, 1200, 0));
+            if ((!worldIn.isClientSide && livingEntity.blockPosition().getY() <= 62 && !livingEntity.isInWaterRainOrBubble()) ||
+                    (!worldIn.isClientSide && worldIn.isRainingAt(livingEntity.blockPosition()) && !livingEntity.hasImpulse)) {
+                livingEntity.addEffect(new EffectInstance(Effects.NIGHT_VISION, 1200, 0));
             }
             return new ItemStack(Items.GLASS_BOTTLE);
         } else {
-            if (livingEntity instanceof PlayerEntity && !((PlayerEntity) livingEntity).abilities.isCreativeMode) {
+            if (livingEntity instanceof PlayerEntity && !((PlayerEntity) livingEntity).abilities.instabuild) {
                 if (ModList.get().isLoaded("neapolitan")) {
-                    livingEntity.addPotionEffect(new EffectInstance(new EffectInstance(
+                    livingEntity.addEffect(new EffectInstance(new EffectInstance(
                             getCompatEffect("neapolitan", IrregularChefCompat.CompatEffects.SUGAR_RUSH).get(), 400, 0)));
                 }
                 ItemStack itemstack = new ItemStack(Items.GLASS_BOTTLE);
                 PlayerEntity playerentity = (PlayerEntity) livingEntity;
-                if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
-                    playerentity.dropItem(itemstack, false);
+                if (!playerentity.inventory.add(itemstack)) {
+                    playerentity.drop(itemstack, false);
                 }
             }
-            BlockPos blockpos = livingEntity.getPosition();
-            if ((!worldIn.isRemote && blockpos.getY() <= 62 && !livingEntity.isInWaterRainOrBubbleColumn()) || (!worldIn.isRemote && worldIn.isRainingAt(blockpos) && !livingEntity.isAirBorne)) {
-                livingEntity.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, 1200, 0));
+            BlockPos blockpos = livingEntity.blockPosition();
+            if ((!worldIn.isClientSide && blockpos.getY() <= 62 && !livingEntity.isInWaterRainOrBubble()) || (!worldIn.isClientSide && worldIn.isRainingAt(blockpos) && !livingEntity.hasImpulse)) {
+                livingEntity.addEffect(new EffectInstance(Effects.NIGHT_VISION, 1200, 0));
             }
             return stack;
         }
@@ -65,8 +65,8 @@ public class DirtCup extends Item {
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+    public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         IFormattableTextComponent tip = TextUtils.getTranslation("tooltip.dirt_cup.tip");
-        tooltip.add(tip.mergeStyle(TextFormatting.GRAY, TextFormatting.ITALIC));
+        tooltip.add(tip.withStyle(TextFormatting.GRAY, TextFormatting.ITALIC));
     }
 }

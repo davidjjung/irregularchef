@@ -15,8 +15,8 @@ public class IrregularChefBlocks {
 	public static final BlockSubRegistryHelper HELPER = IrregularChef.REGISTRY_HELPER.getBlockSubHelper();
 
 	public static final RegistryObject<Block> TURKEY_POT_PIE = HELPER.createBlockNoItem("turkey_pot_pie", () -> new PieBlock(
-			Block.Properties.from(Blocks.CAKE), IrregularChefItems.TURKEY_POT_PIE_SLICE));
+			Block.Properties.copy(Blocks.CAKE), IrregularChefItems.TURKEY_POT_PIE_SLICE));
 
 	public static final RegistryObject<Block> TURTLE_GALLIMAUFRY_BLOCK = HELPER.createBlockNoItem("turtle_gallimaufry_block", () -> new TurtleGallimaufryBlock(
-			Block.Properties.from(Blocks.BONE_BLOCK).sound(SoundType.BONE), IrregularChefItems.TURTLE_GALLIMAUFRY, true));
+			Block.Properties.copy(Blocks.BONE_BLOCK).sound(SoundType.BONE_BLOCK), IrregularChefItems.TURTLE_GALLIMAUFRY, true));
 }

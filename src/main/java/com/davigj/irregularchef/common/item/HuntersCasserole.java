@@ -16,18 +16,20 @@ import net.minecraft.stats.Stats;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.ModList;
 
+import net.minecraft.item.Item.Properties;
+
 public class HuntersCasserole extends Item {
     public HuntersCasserole(Properties properties) {
         super(properties);
     }
 
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        super.onItemUseFinish(stack, worldIn, entityLiving);
+    public ItemStack finishUsingItem(ItemStack stack, World worldIn, LivingEntity entityLiving) {
+        super.finishUsingItem(stack, worldIn, entityLiving);
         if (entityLiving instanceof ServerPlayerEntity) {
             ServerPlayerEntity serverplayerentity = (ServerPlayerEntity) entityLiving;
             CriteriaTriggers.CONSUME_ITEM.trigger(serverplayerentity, stack);
-            serverplayerentity.addStat(Stats.ITEM_USED.get(this));
+            serverplayerentity.awardStat(Stats.ITEM_USED.get(this));
         }
 
         if (stack.isEmpty() && entityLiving instanceof PlayerEntity) {
@@ -41,23 +43,23 @@ public class HuntersCasserole extends Item {
 
     private void englow (PlayerEntity entityLiving) {
         if (entityLiving != null) {
-            for (AnimalEntity living : entityLiving.world.getEntitiesWithinAABB(AnimalEntity.class, entityLiving.getBoundingBox().grow(45.0D, 10.0D, 45.0D))) {
-                living.addPotionEffect(new EffectInstance(Effects.GLOWING, 400));
+            for (AnimalEntity living : entityLiving.level.getEntitiesOfClass(AnimalEntity.class, entityLiving.getBoundingBox().inflate(45.0D, 10.0D, 45.0D))) {
+                living.addEffect(new EffectInstance(Effects.GLOWING, 400));
             }
-            for (MonsterEntity living : entityLiving.world.getEntitiesWithinAABB(MonsterEntity.class, entityLiving.getBoundingBox().grow(25.0D, 2.0D, 25.0D))) {
-                living.addPotionEffect(new EffectInstance(Effects.GLOWING, 150));
+            for (MonsterEntity living : entityLiving.level.getEntitiesOfClass(MonsterEntity.class, entityLiving.getBoundingBox().inflate(25.0D, 2.0D, 25.0D))) {
+                living.addEffect(new EffectInstance(Effects.GLOWING, 150));
             }
-            for (PlayerEntity living : entityLiving.world.getEntitiesWithinAABB(PlayerEntity.class, entityLiving.getBoundingBox().grow(15.0D, 4.0D, 15.0D))) {
-                living.addPotionEffect(new EffectInstance(Effects.GLOWING, 150));
+            for (PlayerEntity living : entityLiving.level.getEntitiesOfClass(PlayerEntity.class, entityLiving.getBoundingBox().inflate(15.0D, 4.0D, 15.0D))) {
+                living.addEffect(new EffectInstance(Effects.GLOWING, 150));
             }
-            for (AbstractFishEntity living : entityLiving.world.getEntitiesWithinAABB(AbstractFishEntity.class, entityLiving.getBoundingBox().grow(25.0D, 4.0D, 25.0D))) {
-                living.addPotionEffect(new EffectInstance(Effects.GLOWING, 400));
+            for (AbstractFishEntity living : entityLiving.level.getEntitiesOfClass(AbstractFishEntity.class, entityLiving.getBoundingBox().inflate(25.0D, 4.0D, 25.0D))) {
+                living.addEffect(new EffectInstance(Effects.GLOWING, 400));
             }
-            entityLiving.removePotionEffect(Effects.GLOWING);
+            entityLiving.removeEffect(Effects.GLOWING);
             ItemStack itemstack = new ItemStack(Items.BOWL);
             PlayerEntity playerentity = (PlayerEntity) entityLiving;
-            if (!(playerentity.isCreative()) && !playerentity.inventory.addItemStackToInventory(itemstack)) {
-                playerentity.dropItem(itemstack, false);
+            if (!(playerentity.isCreative()) && !playerentity.inventory.add(itemstack)) {
+                playerentity.drop(itemstack, false);
             }
         }
     }

@@ -18,6 +18,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
+import net.minecraft.item.Item.Properties;
+
 public class SingleBowledEffect extends Item {
     // Granted, this class doesn't care about what vanilla/FD effects the player may acquire upon consumption
     // The "single effect" largely applies to a modded effect the food imparts.
@@ -38,26 +40,26 @@ public class SingleBowledEffect extends Item {
     }
 
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        super.onItemUseFinish(stack, worldIn, entityLiving);
+    public ItemStack finishUsingItem(ItemStack stack, World worldIn, LivingEntity entityLiving) {
+        super.finishUsingItem(stack, worldIn, entityLiving);
         if (entityLiving instanceof ServerPlayerEntity) {
             ServerPlayerEntity serverplayerentity = (ServerPlayerEntity) entityLiving;
             CriteriaTriggers.CONSUME_ITEM.trigger(serverplayerentity, stack);
-            serverplayerentity.addStat(Stats.ITEM_USED.get(this));
+            serverplayerentity.awardStat(Stats.ITEM_USED.get(this));
         }
 
         if (stack.isEmpty()) {
             return new ItemStack(Items.BOWL);
         } else {
-            if (entityLiving instanceof PlayerEntity && !((PlayerEntity) entityLiving).abilities.isCreativeMode) {
+            if (entityLiving instanceof PlayerEntity && !((PlayerEntity) entityLiving).abilities.instabuild) {
                 if (ModList.get().isLoaded(modid)) {
-                    entityLiving.addPotionEffect(new EffectInstance(new EffectInstance(
+                    entityLiving.addEffect(new EffectInstance(new EffectInstance(
                             getCompatEffect(modid, effect).get(), duration, amplifier)));
                 }
                 ItemStack itemstack = new ItemStack(Items.BOWL);
                 PlayerEntity playerentity = (PlayerEntity) entityLiving;
-                if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
-                    playerentity.dropItem(itemstack, false);
+                if (!playerentity.inventory.add(itemstack)) {
+                    playerentity.drop(itemstack, false);
                 }
             }
             return stack;

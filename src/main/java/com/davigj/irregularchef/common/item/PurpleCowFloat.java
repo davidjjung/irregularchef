@@ -18,17 +18,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
+import net.minecraft.item.Item.Properties;
+
 public class PurpleCowFloat extends Item {
-    String modid;
-    ResourceLocation effect;
-    int duration;
-    int amplifier;
     public PurpleCowFloat(Properties properties) {
         super(properties);
-        this.modid = modid;
-        this.effect = effect;
-        this.duration = duration;
-        this.amplifier = amplifier;
     }
 
     private static Supplier<Effect> getCompatEffect(String modid, ResourceLocation effect) {
@@ -36,41 +30,38 @@ public class PurpleCowFloat extends Item {
     }
 
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        super.onItemUseFinish(stack, worldIn, entityLiving);
+    public ItemStack finishUsingItem(ItemStack stack, World worldIn, LivingEntity entityLiving) {
+        super.finishUsingItem(stack, worldIn, entityLiving);
         if (entityLiving instanceof ServerPlayerEntity) {
             ServerPlayerEntity serverplayerentity = (ServerPlayerEntity) entityLiving;
             CriteriaTriggers.CONSUME_ITEM.trigger(serverplayerentity, stack);
-            serverplayerentity.addStat(Stats.ITEM_USED.get(this));
+            serverplayerentity.awardStat(Stats.ITEM_USED.get(this));
         }
 
         if (stack.isEmpty()) {
             return new ItemStack(Items.GLASS_BOTTLE);
         } else {
-            if (entityLiving instanceof PlayerEntity && !((PlayerEntity) entityLiving).abilities.isCreativeMode) {
-                if (ModList.get().isLoaded(modid)) {
-                    entityLiving.addPotionEffect(new EffectInstance(new EffectInstance(
-                            getCompatEffect(modid, effect).get(), duration, amplifier)));
-                }
+            if (entityLiving instanceof PlayerEntity && !((PlayerEntity) entityLiving).abilities.instabuild) {
+                entityLiving.clearFire();
                 ItemStack itemstack = new ItemStack(Items.GLASS_BOTTLE);
                 PlayerEntity playerentity = (PlayerEntity) entityLiving;
-                if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
-                    playerentity.dropItem(itemstack, false);
+                if (!playerentity.inventory.add(itemstack)) {
+                    playerentity.drop(itemstack, false);
                 }
             }
             return stack;
         }
     }
 
-    public UseAction getUseAction(ItemStack stack) {
+    public UseAction getUseAnimation(ItemStack stack) {
         return UseAction.DRINK;
     }
 
-    public SoundEvent getEatSound() {
-        return SoundEvents.ENTITY_GENERIC_DRINK;
+    public SoundEvent getEatingSound() {
+        return SoundEvents.GENERIC_DRINK;
     }
 
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
-        return DrinkHelper.startDrinking(worldIn, playerIn, handIn);
+    public ActionResult<ItemStack> use(World worldIn, PlayerEntity playerIn, Hand handIn) {
+        return DrinkHelper.useDrink(worldIn, playerIn, handIn);
     }
 }

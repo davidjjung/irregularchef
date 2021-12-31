@@ -18,6 +18,8 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
+import net.minecraft.item.Item.Properties;
+
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 public class PoolPartyStick extends Item {
@@ -26,32 +28,32 @@ public class PoolPartyStick extends Item {
     }
 
     @Override
-    public ItemStack onItemUseFinish (ItemStack stack, World worldIn, LivingEntity entityLiving) {
+    public ItemStack finishUsingItem (ItemStack stack, World worldIn, LivingEntity entityLiving) {
         PlayerEntity playerentity = entityLiving instanceof PlayerEntity ? (PlayerEntity)entityLiving : null;
         ItemStack container = stack.getContainerItem();
-        ItemStack itemstack = super.onItemUseFinish(stack, worldIn, entityLiving);
-        if (entityLiving instanceof PlayerEntity && ((PlayerEntity)entityLiving).abilities.isCreativeMode) {
+        ItemStack itemstack = super.finishUsingItem(stack, worldIn, entityLiving);
+        if (entityLiving instanceof PlayerEntity && ((PlayerEntity)entityLiving).abilities.instabuild) {
             return itemstack;
         } else {
-            if (playerentity == null || !playerentity.abilities.isCreativeMode) {
+            if (playerentity == null || !playerentity.abilities.instabuild) {
                 if (itemstack.isEmpty()) {
                     return container;
                 }
                 if (playerentity != null) {
                     // don't know why removing the bottom line fixes it giving two sticks
-                    playerentity.inventory.addItemStackToInventory(container);
+                    playerentity.inventory.add(container);
                 }
             }
-            entityLiving.setAir(300);
+            entityLiving.setAirSupply(300);
             return stack;
         }
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+    public void appendHoverText(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         IFormattableTextComponent tip = TextUtils.getTranslation("tooltip.pool_party_stick.tip");
-        tooltip.add(tip.mergeStyle(TextFormatting.GRAY, TextFormatting.ITALIC));
+        tooltip.add(tip.withStyle(TextFormatting.GRAY, TextFormatting.ITALIC));
     }
 }
 

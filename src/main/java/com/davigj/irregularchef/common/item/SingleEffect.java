@@ -12,6 +12,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
+import net.minecraft.item.Item.Properties;
+
 public class SingleEffect extends Item {
     String modid;
     ResourceLocation effect;
@@ -27,10 +29,10 @@ public class SingleEffect extends Item {
     }
 
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        super.onItemUseFinish(stack, worldIn, entityLiving);
-        if (!worldIn.isRemote && ModList.get().isLoaded(modid)) {
-            entityLiving.addPotionEffect(new EffectInstance(new EffectInstance(
+    public ItemStack finishUsingItem(ItemStack stack, World worldIn, LivingEntity entityLiving) {
+        super.finishUsingItem(stack, worldIn, entityLiving);
+        if (!worldIn.isClientSide && ModList.get().isLoaded(modid)) {
+            entityLiving.addEffect(new EffectInstance(new EffectInstance(
                     getCompatEffect(modid, effect).get(), duration, amplifier)));
         }
         return stack;

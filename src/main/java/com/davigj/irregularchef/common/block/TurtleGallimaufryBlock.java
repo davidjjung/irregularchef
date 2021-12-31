@@ -17,6 +17,8 @@ import vectorwing.farmersdelight.blocks.FeastBlock;
 import java.util.Random;
 import java.util.function.Supplier;
 
+import net.minecraft.block.AbstractBlock.Properties;
+
 public class TurtleGallimaufryBlock extends FeastBlock {
 
     protected static final VoxelShape SHAPE;
@@ -30,7 +32,7 @@ public class TurtleGallimaufryBlock extends FeastBlock {
     }
 
     static {
-        SHAPE = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 8.0D, 14.0D);
+        SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 8.0D, 14.0D);
     }
 //    @OnlyIn(Dist.CLIENT)
 //    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
