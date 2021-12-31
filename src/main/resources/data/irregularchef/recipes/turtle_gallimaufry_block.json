@@ -2,13 +2,13 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "item": "minecraft:cooked_chicken"
+      "tag": "forge:raw_chicken"
     },
     {
-      "item": "minecraft:cooked_porkchop"
+      "item": "minecraft:raw_porkchop"
     },
     {
-      "item": "minecraft:bread"
+      "tag": "forge:grain/wheat"
     },
     {
       "item": "minecraft:mushroom_stew"

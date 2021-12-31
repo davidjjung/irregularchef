@@ -2,10 +2,10 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "item": "autumnity:cooked_turkey_piece"
+      "item": "autumnity:turkey_piece"
     },
     {
-      "item": "autumnity:cooked_turkey_piece"
+      "item": "autumnity:turkey_piece"
     },
     {
       "item": "minecraft:potato"
@@ -29,5 +29,5 @@
       "modid": "autumnity"
     }
   ],
-  "cookingtime": 200
+  "cookingtime": 300
 }
