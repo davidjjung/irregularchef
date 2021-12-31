@@ -25,7 +25,7 @@ An unofficial compat mod that adds some irregular foods and compat for Team Abno
 [[dependencies.irregularchef]]
     modId = "forge"
     mandatory = true
-    versionRange = "[36.1.0,)"
+    versionRange = "[36.2.0,)"
     ordering = "NONE"
     side = "BOTH"
 
