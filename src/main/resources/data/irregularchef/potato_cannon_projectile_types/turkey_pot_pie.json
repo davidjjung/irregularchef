@@ -1,0 +1,11 @@
+{
+  "items": [
+    "irregularchef:turkey_pot_pie"
+  ],
+  "damage": 8,
+  "reload_ticks": 15,
+  "knockback": 0.08,
+  "velocity_multiplier": 1.05,
+  "sticky": false,
+  "sound_pitch": 1.1
+}
