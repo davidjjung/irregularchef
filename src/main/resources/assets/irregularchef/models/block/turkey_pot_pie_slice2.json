@@ -2,7 +2,7 @@
   "parent": "farmersdelight:block/pie_slice2",
   "textures": {
     "particle": "irregularchef:block/turkey_pot_pie_top",
-    "bottom": "irregularchef:block/pie_bottom",
+    "bottom": "farmersdelight:block/pie_bottom",
     "inner": "irregularchef:block/turkey_pot_pie_inner",
     "side": "irregularchef:block/turkey_pot_pie_side",
     "top": "irregularchef:block/turkey_pot_pie_top"
