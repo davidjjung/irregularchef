@@ -9,6 +9,7 @@
   "item.irregularchef.hunters_casserole": "Hunter's Casserole",
   "item.irregularchef.charcoal_waffles": "Charcoal Waffles",
   "item.irregularchef.thrasher_soup": "Thrasher Fin Soup",
+  "item.irregularchef.boof_wrap": "Booflo Wrap",
 
 
   "block.irregularchef.turtle_gallimaufry_block": "Turtle Gallimaufry",
@@ -16,7 +17,8 @@
   "block.irregularchef.turkey_pot_pie": "Turkey Pot Pie",
   "item.irregularchef.turkey_pot_pie_slice": "Slice of Turkey Pot Pie",
 
-  "irregularchef.tooltip.dirt_cup.tip": "Subterranean sight",
-  "irregularchef.tooltip.traffic_jam_roll.tip": "Crowd control",
-  "irregularchef.tooltip.pool_party_stick.tip": "Bubble bubble"
+  "irregularchef.tooltip.dirt_cup.tip": "Subterranean Sight",
+  "irregularchef.tooltip.traffic_jam_roll.tip": "Crowd Control",
+  "irregularchef.tooltip.pool_party_stick.tip": "Bubble bubble",
+  "irregularchef.tooltip.boof_wrap.when_feeding": "When fed to a Booflo:"
 }

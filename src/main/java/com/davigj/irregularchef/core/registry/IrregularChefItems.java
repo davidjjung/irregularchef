@@ -52,6 +52,9 @@ public class IrregularChefItems {
     public static final RegistryObject<Item> PURPLE_COW_FLOAT = HELPER.createItem("purple_cow_float", () -> new PurpleCowFloat(
             new Item.Properties().food(Foods.PURPLE_COW_FLOAT).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab((isModLoaded(IrregularChefCompat.CompatMods.ENDERGETIC) && isModLoaded(IrregularChefCompat.CompatMods.ATMOSPHERIC)) ? ItemGroup.TAB_FOOD : null)));
 
+//    public static final RegistryObject<Item> BOOF_WRAP = HELPER.createItem("boof_wrap", () -> new BoofWrap(
+//            new Item.Properties().food(Foods.BOOF_WRAP).tab((isModLoaded(IrregularChefCompat.CompatMods.ENDERGETIC)) ? ItemGroup.TAB_FOOD : null)));
+
     public static final RegistryObject<Item> DIRT_CUP = HELPER.createItem("dirt_cup", () -> new DirtCup(
             new Item.Properties().food(Foods.DIRT_CUP).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).tab((isModLoaded(IrregularChefCompat.CompatMods.ENVIRONMENTAL) && isModLoaded(IrregularChefCompat.CompatMods.NEAPOLITAN) && isModLoaded(IrregularChefCompat.CompatMods.UPGRADE_AQUATIC)) ? ItemGroup.TAB_FOOD : null)));
 
@@ -86,6 +89,7 @@ public class IrregularChefItems {
         public static final Food HUNTERS_CASSEROLE = (new Food.Builder()).nutrition(8).saturationMod(0.6F).effect(() -> new EffectInstance(Effects.INVISIBILITY, 300, 0, true, false), 1.0F).build();
         public static final Food CHARCOAL_WAFFLES = (new Food.Builder()).nutrition(4).saturationMod(0.8F).effect(() -> new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 480, 0, false, true), 0.7F).effect(() -> new EffectInstance(Effects.FIRE_RESISTANCE, 500, 0, false, true), 1.0F).build();
         public static final Food THRASHER_SOUP = (new Food.Builder()).nutrition(7).saturationMod(0.8F).effect(() -> new EffectInstance(Effects.BLINDNESS, 260, 0, false, true), 1.0F).effect(() -> new EffectInstance(Effects.DAMAGE_BOOST, 300, 2, false, true), 1.0F).build();
+        public static final Food BOOF_WRAP = (new Food.Builder()).nutrition(4).saturationMod(0.6F).effect(() -> new EffectInstance(Effects.SLOW_FALLING, 60, 0, false, true), 1.0F).build();
 
     }
 }
