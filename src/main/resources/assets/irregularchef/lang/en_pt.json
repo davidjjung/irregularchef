@@ -1,0 +1,24 @@
+{
+  "item.irregularchef.birds_nest_soup": "Queen's delicacy",
+  "item.irregularchef.steamed_beef_wrap": "Steamin' Baho",
+  "item.irregularchef.lavender_mashed_potatoes": "Good smellin' tater innards",
+  "item.irregularchef.traffic_jam_roll": "Multicolored biscuits",
+  "item.irregularchef.dirt_cup": "Tankard o' odd cacoa",
+  "item.irregularchef.pool_party_stick": "Mermaid's Meal on a Cane o' Sea",
+  "item.irregularchef.purple_cow_float": "Enlightenin' Purple Bumbo",
+  "item.irregularchef.hunters_casserole": "Land Fisherman's Stew",
+  "item.irregularchef.charcoal_waffles": "Jolly Roger Cake",
+  "item.irregularchef.thrasher_soup": "Swashbuckler's chow",
+  "item.irregularchef.boof_wrap": "Blubberer's food",
+
+
+  "block.irregularchef.turtle_gallimaufry_block": "Leftovers in a turtleshell",
+  "item.irregularchef.turtle_gallimaufry": "Bowl o' leftovers",
+  "block.irregularchef.turkey_pot_pie": "Fall Fowl Pastry",
+  "item.irregularchef.turkey_pot_pie_slice": "Cut piece o' Fall Fowl pastry",
+
+  "irregularchef.tooltip.dirt_cup.tip": "Moonlight in th' mines",
+  "irregularchef.tooltip.traffic_jam_roll.tip": "Fer bein' dogpiled",
+  "irregularchef.tooltip.pool_party_stick.tip": "Magic Air",
+  "irregularchef.tooltip.boof_wrap.when_feeding": "When feedin' to yer tamed Blubber Beast:"
+}
