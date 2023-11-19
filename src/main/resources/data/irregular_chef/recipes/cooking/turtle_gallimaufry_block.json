@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:raw_chicken"
+    },
+    {
+      "item": "minecraft:porkchop"
+    },
+    {
+      "tag": "forge:grain/wheat"
+    },
+    {
+      "item": "minecraft:mushroom_stew"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:seagrass"
+    }
+  ],
+  "result": {
+    "item": "irregular_chef:turtle_gallimaufry_block"
+  },
+  "container": {
+    "item": "minecraft:turtle_helmet",
+    "damage": "0"
+  },
+  "cookingtime": 400,
+  "experience": 2.0
+}

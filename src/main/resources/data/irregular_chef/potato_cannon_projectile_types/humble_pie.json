@@ -1,0 +1,11 @@
+{
+  "items": [
+    "irregular_chef:humble_pie"
+  ],
+  "damage": 4,
+  "reload_ticks": 20,
+  "knockback": 0.18,
+  "velocity_multiplier": 1.05,
+  "sticky": false,
+  "sound_pitch": 1.1
+}

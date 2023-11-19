@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "irregular_chef:turtle_gallimaufry_block",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "items": [
+    "neapolitan:adzuki_cake",
+    "neapolitan:banana_cake",
+    "neapolitan:mint_cake",
+    "neapolitan:strawberry_cake",
+    "neapolitan:chocolate_cake",
+    "neapolitan:vanilla_cake"
+
+  ],
+  "damage": 8,
+  "reload_ticks": 15,
+  "knockback": 0.1,
+  "velocity_multiplier": 1.1,
+  "sticky": true
+}

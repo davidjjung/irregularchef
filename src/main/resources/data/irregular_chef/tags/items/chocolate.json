@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#forge:bars/chocolate",
+      "required": false
+    },
+    {
+      "id": "create:chocolate_bucket",
+      "required": false
+    }
+  ]
+}

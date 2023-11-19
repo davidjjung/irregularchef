@@ -1,0 +1,35 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:raw_beef"
+    },
+    {
+      "item": "farmersdelight:minced_beef"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "tag": "forge:crops/tomato"
+    },
+    {
+      "tag": "forge:fruits/banana"
+    }
+  ],
+  "result": {
+    "item": "irregular_chef:steamed_beef_wrap",
+    "count": 2
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "container": {
+    "item": "neapolitan:banana_frond"
+  },
+  "cookingtime": 200,
+  "experience": 1.0
+}

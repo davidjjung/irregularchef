@@ -1,0 +1,33 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "spelunkery"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cooked_rabbit"
+    },
+    {
+      "item": "minecraft:spider_eye"
+    },
+    {
+      "item": "spelunkery:salt"
+    },
+    {
+      "item": "spelunkery:salt"
+    },
+    {
+      "tag": "irregular_chef:jerky_berries"
+    },
+    {
+      "tag": "irregular_chef:jerky_berries"
+    }
+  ],
+  "result": {
+    "item": "irregular_chef:hunters_jerky",
+    "count": 2
+  }
+}

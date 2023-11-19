@@ -1,0 +1,12 @@
+{
+  "rarity": "uncommon",
+  "displayName": {
+    "translate": "entity.irregular_chef.slabfish.type.chef"
+  },
+  "translucent": true,
+  "conditions": [
+    {
+      "type": "environmental:impossible"
+    }
+  ]
+}

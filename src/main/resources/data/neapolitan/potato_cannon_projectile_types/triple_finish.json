@@ -1,0 +1,14 @@
+{
+  "items": [
+    "neapolitan:adzuki_beans",
+    "neapolitan:roasted_adzuki_beans",
+    "neapolitan:strawberries",
+    "neapolitan:white_strawberries"
+  ],
+  "damage": 3,
+  "reload_ticks": 10,
+  "knockback": 0.1,
+  "split": 3,
+  "velocity_multiplier": 1.25,
+  "sound_pitch": 1.05
+}

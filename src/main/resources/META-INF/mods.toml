@@ -1,0 +1,39 @@
+modLoader = "javafml"
+loaderVersion = "[32,)"
+issueTrackerURL = "https://github.com/davidjjung/irregularchef/issues"
+license = "MIT License"
+
+[[mods]]
+modId = "irregular_chef"
+version = "${file.jarVersion}"
+logoFile = "logo.png"
+itemIcon = "minecraft:dirt"
+configBackground = "minecraft:textures/block/dirt.png"
+authors = "DavigJ"
+credits = "DavigJ"
+displayURL = ""
+displayName = "The Irregular Chef"
+description = '''
+    A Farmer's Delight add-on that adds some unconventional integration with various other mods.
+    '''
+
+[[dependencies.irregular_chef]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.2,1.19.3)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.irregular_chef]]
+modId = "forge"
+mandatory = true
+versionRange = "[43.3.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.irregular_chef]]
+modId = "blueprint"
+mandatory = true
+versionRange = "[6.2.0,)"
+ordering = "AFTER"
+side = "BOTH"

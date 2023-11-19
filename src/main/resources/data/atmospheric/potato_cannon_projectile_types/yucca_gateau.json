@@ -1,0 +1,10 @@
+{
+  "items": [
+    "atmospheric:yucca_gateau"
+  ],
+  "damage": 6,
+  "reload_ticks": 15,
+  "knockback": 0.1,
+  "velocity_multiplier": 1.1,
+  "sticky": true
+}

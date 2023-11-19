@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sugar",
+    {
+      "id": "#irregular_chef:syrup_containers",
+      "required": false
+    },
+    {
+      "id": "#irregular_chef:red_berries",
+      "required": false
+    },
+    {
+      "id": "#irregular_chef:ochre_berries",
+      "required": false
+    },
+    {
+      "id": "#irregular_chef:chocolate",
+      "required": false
+    }
+  ]
+}

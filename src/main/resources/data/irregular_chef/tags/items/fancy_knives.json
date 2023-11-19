@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "farmersdelight:netherite_knife",
+    {
+      "id": "caverns_and_chasms:necromium_knife",
+      "required": false
+    }
+  ]
+}

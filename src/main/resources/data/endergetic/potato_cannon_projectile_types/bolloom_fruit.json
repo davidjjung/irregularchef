@@ -1,0 +1,8 @@
+{
+  "items": [
+    "endergetic:bolloom_fruit"
+  ],
+  "damage": 2,
+  "reload_ticks": 10,
+  "velocity_multiplier": 1.0
+}

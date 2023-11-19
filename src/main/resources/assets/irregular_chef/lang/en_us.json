@@ -1,0 +1,28 @@
+{
+  "item.irregular_chef.birds_nest_soup": "Bird's Nest Soup",
+  "item.irregular_chef.thrasher_soup": "Thrasher Fin Soup",
+  "item.irregular_chef.belt_spaghetti": "Belt Spaghetti",
+  "item.irregular_chef.steamed_beef_wrap": "Steamed Beef Wrap",
+  "item.irregular_chef.lavender_mashed_potatoes": "Lavender Mashed Potatoes",
+  "item.irregular_chef.prickly_pudding": "Prickly Pear Pudding",
+  "item.irregular_chef.traffic_jam_roll": "Traffic Jam Rolls",
+  "item.irregular_chef.dirt_cup": "Dirt Cup",
+  "item.irregular_chef.pool_party_stick": "Pool Party on a Stick",
+  "item.irregular_chef.purple_cow_float": "Purple Cow Float",
+  "item.irregular_chef.hunters_jerky": "Hunter's Jerky",
+
+  "block.irregular_chef.turtle_gallimaufry_block": "Turtle Gallimaufry",
+  "item.irregular_chef.turtle_gallimaufry": "Bowl of Turtle Gallimaufry",
+  "block.irregular_chef.turkey_pot_pie": "Turkey Pot Pie",
+  "item.irregular_chef.turkey_pot_pie_slice": "Slice of Turkey Pot Pie",
+  "block.irregular_chef.humble_pie": "Humble Pie",
+  "item.irregular_chef.humble_pie_slice": "Slice of Humble Pie",
+  "block.irregular_chef.waffle": "Waffle",
+
+  "irregular_chef.tooltip.eat_humble_pie_slice": "When Unarmored:",
+  "irregular_chef.tooltip.eat_dirt_cup": "When Underground:",
+  "irregular_chef.tooltip.eat_traffic_jam_roll": "To Surrounding Entities:",
+  "irregular_chef.tooltip.eat_prickly_pudding": "When Parched:",
+  "irregular_chef.tooltip.pool_party_stick": "Restores Breath",
+  "irregular_chef.tooltip.hunters_jerky": "Reveals the Living"
+}

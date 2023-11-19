@@ -1,0 +1,17 @@
+{
+  "items": [
+    "abnormals_delight:adzuki_cake_slice",
+    "abnormals_delight:banana_cake_slice",
+    "abnormals_delight:mint_cake_slice",
+    "abnormals_delight:strawberry_cake_slice",
+    "abnormals_delight:chocolate_cake_slice",
+    "abnormals_delight:vanilla_cake_slice",
+    "abnormals_delight:yucca_gateau_slice"
+
+  ],
+  "damage": 4,
+  "reload_ticks": 8,
+  "knockback": 0.2,
+  "velocity_multiplier": 1.4,
+  "sound_pitch": 1.5
+}

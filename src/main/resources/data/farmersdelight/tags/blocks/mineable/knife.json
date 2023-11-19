@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "irregular_chef:turtle_gallimaufry_block",
+      "required": false
+    },
+    {
+      "id": "irregular_chef:turkey_pot_pie",
+      "required": false
+    },
+    {
+      "id": "irregular_chef:humble_pie",
+      "required": false
+    }
+  ]
+}

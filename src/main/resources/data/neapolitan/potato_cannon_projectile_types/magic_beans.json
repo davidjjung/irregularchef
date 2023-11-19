@@ -1,0 +1,11 @@
+{
+  "items": [
+    "neapolitan:magic_beans"
+  ],
+  "damage": 3,
+  "reload_ticks": 20,
+  "knockback": 0.1,
+  "split": 6,
+  "velocity_multiplier": 1.25,
+  "sound_pitch": 1.05
+}

@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "habitat:orange_ball_cactus",
+      "required": false
+    },
+    {
+      "id": "habitat:red_ball_cactus",
+      "required": false
+    },
+    {
+      "id": "habitat:yellow_ball_cactus",
+      "required": false
+    },
+    {
+      "id": "atmospheric:barrel_cactus",
+      "required": false
+    },
+    {
+      "id": "ecologics:prickly_pear",
+      "required": false
+    },
+    {
+      "id": "habitat:pink_ball_cactus",
+      "required": false
+    }
+  ]
+}

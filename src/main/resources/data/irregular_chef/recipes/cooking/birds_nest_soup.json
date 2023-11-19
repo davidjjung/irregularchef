@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "item": "incubation:twig_nest"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    }
+  ],
+  "result": {
+    "item": "irregular_chef:birds_nest_soup"
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "incubation"
+    }
+  ],
+  "cookingtime": 300,
+  "experience": 2.0
+}

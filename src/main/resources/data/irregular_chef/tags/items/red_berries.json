@@ -1,0 +1,34 @@
+{
+  "replace": false,
+  "values": [
+   "minecraft:sweet_berries",
+    {
+      "id": "windswept:holly_berries",
+      "required": false
+    },
+    {
+      "id": "windswept:wild_berries",
+      "required": false
+    },
+    {
+      "id": "neapolitan:strawberries",
+      "required": false
+    },
+    {
+      "id": "environmental:cherries",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:mulberry",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:mulberry_jam",
+      "required": false
+    },
+    {
+      "id": "create_central_kitchen:mulberry_jam_bucket",
+      "required": false
+    }
+  ]
+}

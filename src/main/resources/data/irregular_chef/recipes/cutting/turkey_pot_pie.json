@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "irregular_chef:turkey_pot_pie"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "irregular_chef:turkey_pot_pie_slice",
+      "count": 4
+    }
+  ]
+}

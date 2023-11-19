@@ -1,0 +1,12 @@
+{
+  "items": [
+    "neapolitan:strawberry_bean_bonbons"
+  ],
+  "damage": 2,
+  "reload_ticks": 20,
+  "knockback": 0.1,
+  "split": 7,
+  "velocity_multiplier": 1.25,
+  "sound_pitch": 1.05,
+  "sticky": true
+}

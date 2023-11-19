@@ -1,0 +1,39 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:cooked_venison"
+    },
+    {
+      "item": "farmersdelight:cooked_bacon"
+    },
+    {
+      "item": "ecologics:walnut"
+    },
+    {
+      "item": "ecologics:walnut"
+    },
+    [
+      {
+        "item": "minecraft:apple"
+      },
+      {
+        "item": "minecraft:sweet_berries"
+      }
+    ]
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "ecologics"
+    }
+  ],
+  "result": {
+    "item": "irregular_chef:humble_pie"
+  },
+  "container": {
+    "item": "farmersdelight:pie_crust"
+  },
+  "cookingtime": 200,
+  "experience": 1.0
+}

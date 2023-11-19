@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "topping=none,waffles=1": { "model": "irregular_chef:block/waffles/waffle_1" },
+    "topping=none,waffles=2": { "model": "irregular_chef:block/waffles/waffle_2" },
+    "topping=none,waffles=3": { "model": "irregular_chef:block/waffles/waffle_3" },
+    "topping=none,waffles=4": { "model": "irregular_chef:block/waffles/waffle_4" },
+    "topping=none,waffles=5": { "model": "irregular_chef:block/waffles/waffle_5" },
+    "topping=none,waffles=6": { "model": "irregular_chef:block/waffles/waffle_6" },
+    "topping=none,waffles=7": { "model": "irregular_chef:block/waffles/waffle_7" },
+    "topping=none,waffles=8": { "model": "irregular_chef:block/waffles/waffle_8" }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "ecologics"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "supplementaries"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "item": "ecologics:cooked_prickly_pear"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "supplementaries:flax_seeds"
+    }
+  ],
+  "result": {
+    "item": "irregular_chef:prickly_pudding"
+  }
+}

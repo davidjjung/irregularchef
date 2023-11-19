@@ -1,0 +1,10 @@
+{
+  "items": [
+    "neapolitan:banana_bunch"
+  ],
+  "damage": 3,
+  "reload_ticks": 15,
+  "knockback": 0.6,
+  "split": 3,
+  "velocity_multiplier": 1.65
+}

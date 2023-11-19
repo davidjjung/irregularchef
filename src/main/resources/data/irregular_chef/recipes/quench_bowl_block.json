@@ -1,0 +1,35 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "supplementaries"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SFS",
+    "MMM",
+    "TCT"
+  ],
+  "key": {
+    "S": {
+        "tag": "irregular_chef:small_cactus"
+      },
+    "F": {
+      "item": "supplementaries:flax_seeds"
+    },
+    "C": {
+      "item": "minecraft:cactus"
+    },
+    "M": {
+      "item": "minecraft:melon_slice"
+    },
+    "T": {
+      "tag": "forge:crops/tomato"
+    }
+  },
+  "result": {
+    "item": "irregular_chef:quench_bowl_block",
+    "count": 1
+  }
+}

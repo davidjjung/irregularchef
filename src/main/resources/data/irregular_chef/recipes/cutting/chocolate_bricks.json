@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "neapolitan:chocolate_bricks"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/pickaxes"
+  },
+  "result": [
+    {
+      "item": "neapolitan:chocolate_bar",
+      "count": 4
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ]
+}
