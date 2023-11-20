@@ -95,6 +95,7 @@ public class WaffleBlock extends Block {
                     }
                 }
             }
+            return true;
         }
         return false;
     }
