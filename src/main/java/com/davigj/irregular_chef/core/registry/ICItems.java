@@ -65,7 +65,7 @@ public class ICItems {
 
     public static final RegistryObject<Item> TRAFFIC_JAM_ROLL = HELPER.createItem("traffic_jam_roll", () -> new TrafficJamRollItem(
             new Item.Properties().food(Foods.TRAFFIC_JAM_ROLL).tab((isModLoaded(ICConstants.UPGRADE_AQUATIC)
-                            && isModLoaded(ICConstants.ATMOSPHERIC)) ? CreativeModeTab.TAB_FOOD : null)));
+                    && isModLoaded(ICConstants.ATMOSPHERIC)) ? CreativeModeTab.TAB_FOOD : null)));
 
     public static final RegistryObject<Item> POOL_PARTY_STICK = HELPER.createItem("pool_party_stick", () -> new PoolPartyStickItem(
             new Item.Properties().food(Foods.POOL_PARTY_STICK).tab(isModLoaded(ICConstants.UPGRADE_AQUATIC) ? CreativeModeTab.TAB_FOOD : null), false, true));
@@ -74,7 +74,6 @@ public class ICItems {
     public static final RegistryObject<Item> TURKEY_POT_PIE = HELPER.createItem("turkey_pot_pie", () -> new BlockItem(
             ICBlocks.TURKEY_POT_PIE.get(), new Item.Properties().stacksTo(16).tab(
             isModLoaded(ICConstants.AUTUMNITY) ? CreativeModeTab.TAB_FOOD : null)));
-
     public static final RegistryObject<Item> TURKEY_POT_PIE_SLICE = HELPER.createItem("turkey_pot_pie_slice", () -> new ConsumableItem(
             new Item.Properties().food(Foods.TURKEY_POT_PIE_SLICE).tab(isModLoaded(ICConstants.AUTUMNITY) ? CreativeModeTab.TAB_FOOD : null), true, false));
 
@@ -87,6 +86,16 @@ public class ICItems {
             new Item.Properties().food(Foods.TURTLE_GALLIMAUFRY).craftRemainder(Items.BOWL).stacksTo(16).tab(CreativeModeTab.TAB_FOOD), true));
     public static final RegistryObject<Item> TURTLE_GALLIMAUFRY_BLOCK = HELPER.createItem("turtle_gallimaufry_block", () -> new BlockItem(
             ICBlocks.TURTLE_GALLIMAUFRY_BLOCK.get(), new Item.Properties().stacksTo(1).craftRemainder(Items.TURTLE_HELMET).tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<Item> SURF_AND_TURF = HELPER.createItem("surf_and_turf", () -> new ConsumableItem(
+            new Item.Properties().food(Foods.SURF_AND_TURF).craftRemainder(Items.BOWL).stacksTo(16).tab(CreativeModeTab.TAB_FOOD), true));
+    public static final RegistryObject<Item> SURF_AND_TURF_BLOCK = HELPER.createItem("surf_and_turf_block", () -> new BlockItem(
+            ICBlocks.SURF_AND_TURF_BLOCK.get(), new Item.Properties().stacksTo(1).craftRemainder(getCompatItem(ICConstants.UPGRADE_AQUATIC, ICConstants.BEACHGRASS).get())
+            .tab(isSurfAndTurf() ? CreativeModeTab.TAB_FOOD : null)));
+
+    private static boolean isSurfAndTurf() {
+        return (isModLoaded(ICConstants.ECOLOGICS) || isModLoaded(ICConstants.ALEXSMOBS) || isModLoaded(ICConstants.QUARK) || isModLoaded(ICConstants.CRABBERSDELIGHT))
+                && isModLoaded(ICConstants.UPGRADE_AQUATIC);
+    }
 
     // Quit wafflin' about
 //    public static final RegistryObject<Item> WAFFLE = HELPER.createItem("waffle_wip", () -> new Item(
@@ -105,14 +114,16 @@ public class ICItems {
         public static final FoodProperties BELT_SPAGHETTI = (new FoodProperties.Builder()).nutrition(13).saturationMod(0.8F)
                 .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 90 * 20, 1, false, true), 1.0F)
                 .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 180 * 20, 0, false, true), 1.0F).build();
+        public static final FoodProperties SURF_AND_TURF = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.8F)
+                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 300 * 20, 0, false, true), 1.0F).build();
 
         public static final FoodProperties HUNTERS_JERKY = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F)
                 .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 20 * 10, 0, true, false), 1.0F).build();
         public static final FoodProperties STEAMED_BEEF_WRAP = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.8F)
                 .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 2400), 1.0F).build();
-//        public static final FoodProperties LAVENDER_MASHED_POTATOES = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.7F).effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1200), 1.0F).build();
+
         public static final FoodProperties TRAFFIC_JAM_ROLL = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.8F)
-        .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100), 1.0F).build();
+                .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100), 1.0F).build();
         public static final FoodProperties POOL_PARTY_STICK = (new FoodProperties.Builder()).nutrition(9).saturationMod(0.6F).build();
         public static final FoodProperties PURPLE_COW_FLOAT = (new FoodProperties.Builder()).nutrition(0).saturationMod(0.0F).alwaysEat()
                 .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 120), 1.0F).build();
@@ -126,5 +137,6 @@ public class ICItems {
         public static final FoodProperties HUMBLE_PIE_SLICE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.5F).fast().build();
 
         public static final FoodProperties WAFFLE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F).build();
+//        public static final FoodProperties LAVENDER_MASHED_POTATOES = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.7F).effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1200), 1.0F).build();
     }
 }

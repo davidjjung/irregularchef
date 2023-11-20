@@ -1,0 +1,38 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SFT",
+    "SMT",
+    "RCR"
+  ],
+  "key": {
+    "C": {
+      "item": "farmersdelight:fried_rice"
+    },
+    "F": {
+      "tag": "forge:eggs"
+    },
+    "S": {
+      "tag": "irregular_chef:surf_foods"
+    },
+    "M": {
+      "tag": "forge:crops/onion"
+    },
+    "T": {
+      "tag": "irregular_chef:turf_foods"
+    },
+    "R": {
+      "item": "upgrade_aquatic:beachgrass"
+    }
+  },
+  "result": {
+    "item": "irregular_chef:surf_and_turf_block",
+    "count": 1
+  }
+}

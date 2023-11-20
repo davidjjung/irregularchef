@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "alexsmobs:cooked_lobster_tail",
+      "required": false
+    },
+    {
+      "id": "ecologics:crab_meat",
+      "required": false
+    },
+    {
+      "id": "quark:cooked_crab_leg",
+      "required": false
+    },
+    {
+      "id": "crabbersdelight:cooked_clawster",
+      "required": false
+    }
+
+  ]
+}

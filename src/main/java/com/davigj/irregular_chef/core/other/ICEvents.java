@@ -46,6 +46,7 @@ public class ICEvents {
             if (event.getEntity() instanceof Slabfish slabfish) {
                 if (slabfish.getSlabfishType().equals(new ResourceLocation(IrregularChefMod.MOD_ID, ICConstants.CHEF_SLABFISH))
                 && event.getSource().isFire() && !(event.getSource().equals(DamageSource.LAVA))) {
+                    slabfish.setSecondsOnFire(0);
                     event.setCanceled(true);
                 }
             }
