@@ -1,12 +1,11 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "block/block",
 	"textures": {
-		"0": "irregular_chef:block/surf_and_turf_tray_top",
-		"1": "irregular_chef:block/surf_and_turf_tray_bottom",
+		"0": "upgrade_aquatic:block/beachgrass_thatch",
+		"1": "upgrade_aquatic:block/beachgrass_thatch",
 		"2": "irregular_chef:block/surf_and_turf_rice",
 		"3": "irregular_chef:block/surf_and_turf_meats",
-		"particle": "irregular_chef:block/surf_and_turf_tray_top"
+		"particle": "upgrade_aquatic:block/beachgrass_thatch"
 	},
 	"elements": [
 		{
@@ -38,20 +37,20 @@
 		{
 			"name": "lobster",
 			"from": [5, 6, 4],
-			"to": [11, 8, 8],
+			"to": [11, 9, 8],
 			"faces": {
-				"north": {"uv": [0, 10, 6, 12], "texture": "#3"},
-				"east": {"uv": [0, 8, 4, 10], "texture": "#3"},
-				"south": {"uv": [0, 10, 6, 12], "texture": "#3"},
-				"west": {"uv": [0, 8, 4, 10], "texture": "#3"},
+				"north": {"uv": [0, 11, 6, 14], "texture": "#3"},
+				"east": {"uv": [0, 8, 4, 11], "texture": "#3"},
+				"south": {"uv": [0, 11, 6, 14], "texture": "#3"},
+				"west": {"uv": [0, 8, 4, 11], "texture": "#3"},
 				"up": {"uv": [0, 4, 6, 8], "texture": "#3"},
 				"down": {"uv": [0, 4, 6, 8], "texture": "#3"}
 			}
 		},
 		{
 			"name": "lobster_top",
-			"from": [6, 8, 5],
-			"to": [11, 9, 7],
+			"from": [6, 9, 5],
+			"to": [11, 10, 7],
 			"faces": {
 				"north": {"uv": [0, 2, 5, 3], "texture": "#3"},
 				"east": {"uv": [0, 3, 2, 4], "texture": "#3"},

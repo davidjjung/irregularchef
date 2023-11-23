@@ -28,7 +28,6 @@ public class ICItems {
     private static Supplier<Item> getCompatItem(String modid, ResourceLocation item) {
         return (ModList.get().isLoaded(modid) ? () -> ForgeRegistries.ITEMS.getValue(item) : () -> null);
     }
-
     private static boolean isModLoaded(String modid) {
         return (ModList.get().isLoaded(modid));
     }
