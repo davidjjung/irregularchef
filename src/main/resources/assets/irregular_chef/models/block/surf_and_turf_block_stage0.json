@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "upgrade_aquatic:block/beachgrass_thatch",
-		"1": "upgrade_aquatic:block/beachgrass_thatch",
+		"0": "irregular_chef:block/surf_and_turf_tray",
+		"1": "irregular_chef:block/surf_and_turf_tray",
 		"2": "irregular_chef:block/surf_and_turf_rice",
 		"3": "irregular_chef:block/surf_and_turf_meats",
-		"particle": "upgrade_aquatic:block/beachgrass_thatch"
+		"particle": "irregular_chef:block/surf_and_turf_tray"
 	},
 	"elements": [
 		{
@@ -42,7 +42,7 @@
 				"north": {"uv": [0, 11, 6, 14], "texture": "#3"},
 				"east": {"uv": [0, 8, 4, 11], "texture": "#3"},
 				"south": {"uv": [0, 11, 6, 14], "texture": "#3"},
-				"west": {"uv": [0, 8, 4, 11], "texture": "#3"},
+				"west": {"uv": [12, 8, 16, 11], "texture": "#3"},
 				"up": {"uv": [0, 4, 6, 8], "texture": "#3"},
 				"down": {"uv": [0, 4, 6, 8], "texture": "#3"}
 			}
@@ -61,9 +61,22 @@
 			}
 		},
 		{
+			"name": "lobster_tail",
+			"from": [3, 6, 3],
+			"to": [5, 7, 9],
+			"faces": {
+				"north": {"uv": [12, 15, 14, 16], "texture": "#3"},
+				"east": {"uv": [10, 10, 16, 11], "texture": "#3"},
+				"south": {"uv": [12, 15, 14, 16], "texture": "#3"},
+				"west": {"uv": [10, 10, 16, 11], "texture": "#3"},
+				"up": {"uv": [14, 10, 16, 16], "texture": "#3"},
+				"down": {"uv": [14, 10, 16, 16], "texture": "#3"}
+			}
+		},
+		{
 			"name": "steak",
-			"from": [4, 6, 8],
-			"to": [8, 10, 12],
+			"from": [5, 6, 8],
+			"to": [9, 10, 12],
 			"faces": {
 				"north": {"uv": [7, 0, 11, 4], "texture": "#3"},
 				"east": {"uv": [7, 0, 11, 4], "texture": "#3"},
@@ -75,15 +88,15 @@
 		},
 		{
 			"name": "potato",
-			"from": [8, 6, 8],
+			"from": [9, 6, 8],
 			"to": [12, 8, 11],
 			"faces": {
-				"north": {"uv": [7, 14, 11, 16], "texture": "#3"},
+				"north": {"uv": [7, 14, 10, 16], "texture": "#3"},
 				"east": {"uv": [7, 9, 10, 11], "texture": "#3"},
-				"south": {"uv": [7, 14, 11, 16], "texture": "#3"},
+				"south": {"uv": [7, 14, 10, 16], "texture": "#3"},
 				"west": {"uv": [7, 9, 10, 11], "texture": "#3"},
-				"up": {"uv": [7, 11, 11, 14], "texture": "#3"},
-				"down": {"uv": [7, 11, 11, 14], "texture": "#3"}
+				"up": {"uv": [7, 11, 10, 14], "texture": "#3"},
+				"down": {"uv": [7, 11, 10, 14], "texture": "#3"}
 			}
 		}
 	]

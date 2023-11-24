@@ -42,8 +42,7 @@ public class ICItems {
 
     public static final RegistryObject<Item> DIRT_CUP = HELPER.createItem("dirt_cup", () -> new DirtCupItem(
             new Item.Properties().food(Foods.DIRT_CUP).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)
-                    .tab((isModLoaded(ICConstants.ENVIRONMENTAL) && isModLoaded(ICConstants.NEAPOLITAN)
-                    ) ? CreativeModeTab.TAB_FOOD : null)));
+                    .tab((isModLoaded(ICConstants.ENVIRONMENTAL) && isModLoaded(ICConstants.NEAPOLITAN)) ? CreativeModeTab.TAB_FOOD : null)));
 
     public static final RegistryObject<Item> PRICKLY_PUDDING = HELPER.createItem("prickly_pudding", () -> new PricklyPuddingItem(
             new Item.Properties().food(Foods.PRICKLY_PUDDING).craftRemainder(Items.BOWL).stacksTo(16)

@@ -129,7 +129,7 @@ public class WaffleBlock extends Block {
             }
             case SUGAR, CHOCOLATE -> {
                 player.getFoodData().eat(1, 0.6F);
-                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 10));
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 10, 0, false, false));
             }
             case SYRUP -> {
                 player.getFoodData().eat(2, 0.6F);
