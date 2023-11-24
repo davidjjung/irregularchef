@@ -1,5 +1,6 @@
 package com.davigj.irregular_chef.core.other;
 
+import com.davigj.irregular_chef.core.IrregularChefMod;
 import net.minecraft.resources.ResourceLocation;
 
 public class ICConstants {
@@ -8,6 +9,7 @@ public class ICConstants {
     public static final String AUTUMNITY = "autumnity";
     public static final String CRABBERSDELIGHT = "crabbersdelight";
     public static final String ENVIRONMENTAL = "environmental";
+    public static final String ENDERGETIC = "endergetic";
     public static final String INCUBATION = "incubation";
     public static final String ECOLOGICS = "ecologics";
     public static final String CREATE = "create";
@@ -21,5 +23,7 @@ public class ICConstants {
 
     public static final ResourceLocation BEACHGRASS = new ResourceLocation(UPGRADE_AQUATIC, "beachgrass");
 
-    public static final String CHEF_SLABFISH = "chef";
+    public static final String CHEF = "chef";
+
+    public static final ResourceLocation CHEF_SLABFISH = new ResourceLocation(IrregularChefMod.MOD_ID, CHEF);
 }

@@ -1,6 +1,7 @@
 package com.davigj.irregular_chef.core;
 
 import com.davigj.irregular_chef.core.other.ICConstants;
+import com.davigj.irregular_chef.core.registry.ICParticleTypes;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -24,6 +25,8 @@ public class IrregularChefMod {
         MinecraftForge.EVENT_BUS.register(this);
 
 		REGISTRY_HELPER.register(bus);
+
+        ICParticleTypes.PARTICLE_TYPES.register(bus);
 
         bus.addListener(this::commonSetup);
         bus.addListener(this::clientSetup);
