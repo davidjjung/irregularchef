@@ -12,6 +12,10 @@
     {
       "id": "irregular_chef:humble_pie",
       "required": false
+    },
+    {
+      "id": "irregular_chef:surf_and_turf_block",
+      "required": false
     }
   ]
 }
