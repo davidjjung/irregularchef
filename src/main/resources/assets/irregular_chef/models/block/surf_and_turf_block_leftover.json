@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
 	"textures": {
 		"0": "irregular_chef:block/surf_and_turf_tray",
 		"1": "upgrade_aquatic:block/beachgrass_thatch",
