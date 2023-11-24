@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "incubation"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "twigs"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "T T",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "twigs:twig"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "incubation:twig_nest",
+    "count": 1
+  }
+}
