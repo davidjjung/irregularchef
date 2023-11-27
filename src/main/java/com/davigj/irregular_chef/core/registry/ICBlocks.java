@@ -1,8 +1,6 @@
 package com.davigj.irregular_chef.core.registry;
 
-import com.davigj.irregular_chef.common.block.HumblePieBlock;
-import com.davigj.irregular_chef.common.block.TurtleGallimaufryBlock;
-import com.davigj.irregular_chef.common.block.WaffleBlock;
+import com.davigj.irregular_chef.common.block.*;
 import com.davigj.irregular_chef.core.IrregularChefMod;
 import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
 import net.minecraft.world.level.block.Block;
@@ -23,9 +21,14 @@ public class ICBlocks {
 
     public static final RegistryObject<Block> TURTLE_GALLIMAUFRY_BLOCK = HELPER.createBlockNoItem("turtle_gallimaufry_block", () -> new TurtleGallimaufryBlock(
             Block.Properties.copy(Blocks.BONE_BLOCK).sound(SoundType.BONE_BLOCK), ICItems.TURTLE_GALLIMAUFRY, true));
+
+    public static final RegistryObject<Block> SURF_AND_TURF_BLOCK = HELPER.createBlockNoItem("surf_and_turf_block", () -> new SurfAndTurfBlock(
+            Block.Properties.copy(Blocks.CAKE), ICItems.SURF_AND_TURF, true));
+
     public static final RegistryObject<Block> WAFFLE_BLOCK = HELPER.createBlockNoItem("waffle", () -> new WaffleBlock(
             Block.Properties.copy(Blocks.CAKE).sound(SoundType.WOOL)));
-
-    public static final RegistryObject<Block> SURF_AND_TURF_BLOCK = HELPER.createBlockNoItem("surf_and_turf_block", () -> new FeastBlock(
-            Block.Properties.copy(Blocks.CAKE), ICItems.SURF_AND_TURF, true));
+    public static final RegistryObject<Block> SMOKY_WAFFLE_PLATTER = HELPER.createBlockNoItem("smoky_waffle_platter", () -> new FeastBlock(
+            Block.Properties.copy(Blocks.CAKE), ICItems.SMOKY_WAFFLES, true));
+    public static final RegistryObject<Block> SAVORY_WAFFLE_PLATTER = HELPER.createBlockNoItem("savory_waffle_platter", () -> new SavoryWafflePlatterBlock(
+            Block.Properties.copy(Blocks.CAKE), ICItems.SAVORY_WAFFLES, true));
 }

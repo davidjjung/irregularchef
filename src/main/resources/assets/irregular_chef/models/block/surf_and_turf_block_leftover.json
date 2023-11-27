@@ -3,11 +3,11 @@
 	"render_type": "minecraft:cutout",
 	"textures": {
 		"0": "irregular_chef:block/surf_and_turf_tray",
-		"1": "upgrade_aquatic:block/beachgrass_thatch",
+		"1": "irregular_chef:block/surf_and_turf_tray",
 		"2": "irregular_chef:block/surf_and_turf_rice",
 		"3": "irregular_chef:block/surf_and_turf_meat_remains",
 		"4": "irregular_chef:block/surf_and_turf_meats",
-		"particle": "upgrade_aquatic:block/beachgrass_thatch"
+		"particle": "irregular_chef:block/surf_and_turf_tray"
 	},
 	"elements": [
 		{
