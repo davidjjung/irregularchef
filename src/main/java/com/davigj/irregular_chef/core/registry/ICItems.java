@@ -40,6 +40,10 @@ public class ICItems {
             new Item.Properties().food(Foods.THRASHER_SOUP).stacksTo(16)
                     .tab(isModLoaded(ICConstants.UPGRADE_AQUATIC) ? CreativeModeTab.TAB_FOOD : null), true, false));
 
+    public static final RegistryObject<Item> PURPLE_COW_FLOAT = HELPER.createItem("purple_cow_float", () -> new ConsumableItem(
+            new Item.Properties().food(Foods.PURPLE_COW_FLOAT).stacksTo(16)
+                    .tab(isModLoaded(ICConstants.CLOUDSTORAGE) ? CreativeModeTab.TAB_FOOD : null), true, false));
+
     public static final RegistryObject<Item> DIRT_CUP = HELPER.createItem("dirt_cup", () -> new DirtCupItem(
             new Item.Properties().food(Foods.DIRT_CUP).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)
                     .tab((isModLoaded(ICConstants.ENVIRONMENTAL) && isModLoaded(ICConstants.NEAPOLITAN)) ? CreativeModeTab.TAB_FOOD : null)));
@@ -96,10 +100,18 @@ public class ICItems {
     }
 
     // Quit wafflin' about
-//    public static final RegistryObject<Item> WAFFLE = HELPER.createItem("waffle_wip", () -> new Item(
-//            new Item.Properties().food(Foods.WAFFLE).tab(isModLoaded(ICConstants.CREATE) ? CreativeModeTab.TAB_FOOD : null)));
     public static final RegistryObject<Item> WAFFLE_BLOCK = HELPER.createItem("waffle", () -> new BlockItem(
             ICBlocks.WAFFLE_BLOCK.get(), new Item.Properties().stacksTo(64).tab(CreativeModeTab.TAB_FOOD)));
+
+    public static final RegistryObject<Item> SMOKY_WAFFLE_PLATTER = HELPER.createItem("smoky_waffle_platter", () -> new BlockItem(
+            ICBlocks.SMOKY_WAFFLE_PLATTER.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<Item> SAVORY_WAFFLE_PLATTER = HELPER.createItem("savory_waffle_platter", () -> new BlockItem(
+            ICBlocks.SAVORY_WAFFLE_PLATTER.get(), new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_FOOD)));
+
+    public static final RegistryObject<Item> SMOKY_WAFFLES = HELPER.createItem("smoky_waffles", () -> new ConsumableItem(
+            new Item.Properties().food(Foods.SMOKY_WAFFLES).tab(CreativeModeTab.TAB_FOOD), true));
+    public static final RegistryObject<Item> SAVORY_WAFFLES = HELPER.createItem("savory_waffles", () -> new ConsumableItem(
+            new Item.Properties().food(Foods.SAVORY_WAFFLES).tab(CreativeModeTab.TAB_FOOD), true));
 
     static class Foods {
         public static final FoodProperties BIRDS_NEST_SOUP = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.6F)
@@ -134,7 +146,13 @@ public class ICItems {
                 .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 600), 1.0F).build();
         public static final FoodProperties HUMBLE_PIE_SLICE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.5F).fast().build();
 
-        public static final FoodProperties WAFFLE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F).build();
-//        public static final FoodProperties LAVENDER_MASHED_POTATOES = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.7F).effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1200), 1.0F).build();
+        public static final FoodProperties SMOKY_WAFFLES = (new FoodProperties.Builder()).nutrition(7).saturationMod(0.7F)
+                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 60 * 20, 0, false, true), 1.0F)
+                .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 30 * 20, 0, false, false), 1.0F).build();
+        public static final FoodProperties SAVORY_WAFFLES = (new FoodProperties.Builder()).nutrition(7).saturationMod(0.7F)
+                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 60 * 20, 0, false, true), 1.0F)
+                .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30 * 20, 0, false, false), 1.0F).build();
+
+        //        public static final FoodProperties LAVENDER_MASHED_POTATOES = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.7F).effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1200), 1.0F).build();
     }
 }

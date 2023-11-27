@@ -1,0 +1,47 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:allium",
+    "minecraft:lilac",
+    {
+      "id": "environmental:purple_delphinium",
+      "required": false
+    },
+    {
+      "id": "environmental:purple_hibiscus",
+      "required": false
+    },
+    {
+      "id": "environmental:violet",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:mulberry",
+      "required": false
+    },
+    {
+      "id": "atmospheric:gilia",
+      "required": false
+    },
+    {
+      "id": "atmospheric:water_hyacinth",
+      "required": false
+    },
+    {
+      "id": "autumnity:autumn_crocus",
+      "required": false
+    },
+    {
+      "id": "ecologics:azalea_flower",
+      "required": false
+    },
+    {
+      "id": "twigs:azalea_flowers",
+      "required": false
+    },
+    {
+      "id": "immersive_weathering:azalea_flowers",
+      "required": false
+    }
+  ]
+}

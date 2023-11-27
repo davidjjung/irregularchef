@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "cloudstorage:cloud"
+    },
+    {
+      "item": "cloudstorage:cloud"
+    },
+    {
+      "tag": "irregular_chef:purple_food_coloring"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "irregular_chef:purple_cow_float"
+  },
+  "experience": 0.35,
+  "cookingtime": 200,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "cloudstorage"
+    }
+  ]
+}
