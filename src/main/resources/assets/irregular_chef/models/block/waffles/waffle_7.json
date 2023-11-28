@@ -1,24 +1,24 @@
 {
-  "credit": "Made with Blockbench",
-  "parent": "block/block",
-  "textures": {
-    "0": "irregular_chef:block/waffle_top",
-    "1": "irregular_chef:block/waffle_side",
-    "2": "irregular_chef:block/waffle_bottom",
-    "particle": "irregular_chef:block/waffle_top"
-  },
-  "elements": [
-    {
-      "from": [3, 0, 3],
-      "to": [13, 14, 13],
-      "faces": {
-        "north": {"uv": [3, 2, 13, 16], "texture": "#1"},
-        "east": {"uv": [3, 2, 13, 16], "texture": "#1"},
-        "south": {"uv": [3, 2, 13, 16], "texture": "#1"},
-        "west": {"uv": [3, 2, 13, 16], "texture": "#1"},
-        "up": {"uv": [3, 3, 13, 13], "texture": "#0"},
-        "down": {"uv": [3, 3, 13, 13], "texture": "#2"}
-      }
-    }
-  ]
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"0": "irregular_chef:block/waffle_top",
+		"1": "irregular_chef:block/waffle_side",
+		"2": "irregular_chef:block/waffle_bottom",
+		"particle": "irregular_chef:block/waffle_top"
+	},
+	"elements": [
+		{
+			"from": [3, 0, 3],
+			"to": [13, 14, 13],
+			"faces": {
+				"north": {"uv": [3, 0, 13, 14], "texture": "#1"},
+				"east": {"uv": [3, 0, 13, 14], "texture": "#1"},
+				"south": {"uv": [3, 0, 13, 14], "texture": "#1"},
+				"west": {"uv": [3, 0, 13, 14], "texture": "#1"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#0"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#2"}
+			}
+		}
+	]
 }
