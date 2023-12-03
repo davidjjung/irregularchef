@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.block.FeastBlock;
 import vectorwing.farmersdelight.common.block.PieBlock;
 
 @Mod.EventBusSubscriber(modid = IrregularChefMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -27,7 +26,7 @@ public class ICBlocks {
 
     public static final RegistryObject<Block> WAFFLE_BLOCK = HELPER.createBlockNoItem("waffle", () -> new WaffleBlock(
             Block.Properties.copy(Blocks.CAKE).sound(SoundType.WOOL)));
-    public static final RegistryObject<Block> SMOKY_WAFFLE_PLATTER = HELPER.createBlockNoItem("smoky_waffle_platter", () -> new FeastBlock(
+    public static final RegistryObject<Block> SMOKY_WAFFLE_PLATTER = HELPER.createBlockNoItem("smoky_waffle_platter", () -> new SmokyWafflePlatterBlock(
             Block.Properties.copy(Blocks.CAKE), ICItems.SMOKY_WAFFLES, true));
     public static final RegistryObject<Block> SAVORY_WAFFLE_PLATTER = HELPER.createBlockNoItem("savory_waffle_platter", () -> new SavoryWafflePlatterBlock(
             Block.Properties.copy(Blocks.CAKE), ICItems.SAVORY_WAFFLES, true));

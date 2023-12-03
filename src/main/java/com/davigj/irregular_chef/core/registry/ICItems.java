@@ -136,7 +136,7 @@ public class ICItems {
                 .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100), 1.0F).build();
         public static final FoodProperties POOL_PARTY_STICK = (new FoodProperties.Builder()).nutrition(9).saturationMod(0.6F).build();
         public static final FoodProperties PURPLE_COW_FLOAT = (new FoodProperties.Builder()).nutrition(0).saturationMod(0.0F).alwaysEat()
-                .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 120), 1.0F).build();
+                .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 20 * 15), 1.0F).build();
 
         public static final FoodProperties TURTLE_GALLIMAUFRY = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.7F)
                 .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1800), 1.0F)

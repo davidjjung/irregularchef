@@ -1,0 +1,108 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "farmersdelight:block/tray_bottom",
+		"1": "farmersdelight:block/tray_top",
+		"2": "irregular_chef:block/savory_waffle_platter",
+		"particle": "farmersdelight:block/tray_bottom"
+	},
+	"elements": [
+		{
+			"name": "tray",
+			"from": [1, 0, 1],
+			"to": [15, 2, 15],
+			"faces": {
+				"north": {"uv": [1, 11, 15, 13], "texture": "#0"},
+				"east": {"uv": [1, 11, 15, 13], "texture": "#0"},
+				"south": {"uv": [1, 11, 15, 13], "texture": "#0"},
+				"west": {"uv": [1, 11, 15, 13], "texture": "#0"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#1"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#0"}
+			}
+		},
+		{
+			"name": "waffle",
+			"from": [8, 2, 3],
+			"to": [14, 4, 9],
+			"faces": {
+				"north": {"uv": [0, 4, 6, 6], "texture": "#2"},
+				"east": {"uv": [0, 4, 6, 6], "texture": "#2"},
+				"south": {"uv": [0, 4, 6, 6], "texture": "#2"},
+				"west": {"uv": [0, 4, 6, 6], "texture": "#2"},
+				"up": {"uv": [0, 0, 6, 6], "texture": "#2"},
+				"down": {"uv": [0, 0, 6, 6], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "waffle_2",
+			"from": [5.7, -2.85, 3],
+			"to": [11.7, -0.85, 9],
+			"rotation": {"angle": 45, "axis": "z", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [4, 0, 6, 6], "rotation": 90, "texture": "#2"},
+				"east": {"uv": [0, 0, 2, 6], "rotation": 270, "texture": "#2"},
+				"south": {"uv": [0, 0, 2, 6], "rotation": 270, "texture": "#2"},
+				"west": {"uv": [0, 0, 2, 6], "rotation": 270, "texture": "#2"},
+				"up": {"uv": [0, 0, 6, 6], "rotation": 270, "texture": "#2"},
+				"down": {"uv": [0, 0, 6, 6], "rotation": 270, "texture": "#2"}
+			}
+		},
+		{
+			"name": "waffle_3",
+			"from": [-1.15, 3.7, 3],
+			"to": [0.85, 9.7, 9],
+			"rotation": {"angle": -45, "axis": "z", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 6], "texture": "#2"},
+				"east": {"uv": [0, 0, 6, 6], "texture": "#2"},
+				"south": {"uv": [4, 0, 6, 6], "texture": "#2"},
+				"west": {"uv": [0, 0, 6, 6], "texture": "#2"},
+				"up": {"uv": [4, 0, 6, 6], "texture": "#2"},
+				"down": {"uv": [4, 0, 6, 6], "texture": "#2"}
+			}
+		},
+		{
+			"name": "drumstick",
+			"from": [3, 2, 10],
+			"to": [8, 5, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 13, 5, 16], "texture": "#2"},
+				"east": {"uv": [1, 13, 5, 16], "texture": "#2"},
+				"south": {"uv": [0, 13, 5, 16], "texture": "#2"},
+				"west": {"uv": [0, 13, 4, 16], "texture": "#2"},
+				"up": {"uv": [0, 9, 5, 13], "texture": "#2"},
+				"down": {"uv": [0, 0, 5, 4], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "bone",
+			"from": [1, 3, 11],
+			"to": [3, 4, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 7, 2, 8], "texture": "#2"},
+				"east": {"uv": [0, 0, 2, 1], "texture": "#missing"},
+				"south": {"uv": [0, 7, 2, 8], "texture": "#2"},
+				"west": {"uv": [0, 7, 2, 8], "texture": "#2"},
+				"up": {"uv": [0, 7, 2, 9], "texture": "#2"},
+				"down": {"uv": [0, 7, 2, 9], "texture": "#2"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "waffles",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [1, 2, 3]
+		},
+		{
+			"name": "chicken",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [4, 5]
+		}
+	]
+}

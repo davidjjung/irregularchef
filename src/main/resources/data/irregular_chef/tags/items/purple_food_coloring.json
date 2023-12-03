@@ -20,6 +20,10 @@
       "required": false
     },
     {
+      "id": "endergetic:bolloom_fruit",
+      "required": false
+    },
+    {
       "id": "atmospheric:gilia",
       "required": false
     },
