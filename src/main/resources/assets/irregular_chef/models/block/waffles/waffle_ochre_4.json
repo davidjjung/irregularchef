@@ -4,7 +4,7 @@
   "textures": {
     "0": "irregular_chef:block/waffle_top_ochre",
     "1": "irregular_chef:block/waffle_side_ochre",
-    "2": "irregular_chef:block/waffle_bottom_ochre",
+    "2": "irregular_chef:block/waffle_bottom",
     "particle": "irregular_chef:block/waffle_top_ochre"
   },
   "elements": [
@@ -23,36 +23,36 @@
         "north": {
           "uv": [
             3,
-            8,
+            0,
             13,
-            16
+            8
           ],
           "texture": "#1"
         },
         "east": {
           "uv": [
             3,
-            8,
+            0,
             13,
-            16
+            8
           ],
           "texture": "#1"
         },
         "south": {
           "uv": [
             3,
-            8,
+            0,
             13,
-            16
+            8
           ],
           "texture": "#1"
         },
         "west": {
           "uv": [
             3,
-            8,
+            0,
             13,
-            16
+            8
           ],
           "texture": "#1"
         },
