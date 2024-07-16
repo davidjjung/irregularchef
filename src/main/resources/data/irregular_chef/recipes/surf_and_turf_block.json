@@ -22,7 +22,7 @@
       "tag": "irregular_chef:surf_foods"
     },
     "M": {
-      "tag": "forge:crops/onion"
+      "item": "minecraft:baked_potato"
     },
     "T": {
       "tag": "irregular_chef:turf_foods"

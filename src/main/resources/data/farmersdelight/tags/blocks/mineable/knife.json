@@ -16,18 +16,6 @@
     {
       "id": "irregular_chef:surf_and_turf_block",
       "required": false
-    },
-    {
-      "id": "irregular_chef:waffle",
-      "required": false
-    },
-    {
-      "id": "irregular_chef:smoky_waffle_platter",
-      "required": false
-    },
-    {
-      "id": "irregular_chef:savory_waffle_platter",
-      "required": false
     }
   ]
 }
