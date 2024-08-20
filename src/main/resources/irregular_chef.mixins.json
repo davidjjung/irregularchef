@@ -3,7 +3,7 @@
   "package": "com.davigj.irregular_chef.core.mixin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
-  "refmap": "template_mod.refmap.json",
+  "refmap": "irregular_chef.refmap.json",
   "mixins": [
     "EntityMixin"
   ],

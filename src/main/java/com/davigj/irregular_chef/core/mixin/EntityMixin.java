@@ -11,12 +11,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Entity.class)
 public class EntityMixin {
-    @Unique
-    TrackedDataManager irregularchef$manager = TrackedDataManager.INSTANCE;
-
     @Inject(method = "isCurrentlyGlowing", at = @At("HEAD"), cancellable = true)
     private void glowWormy(CallbackInfoReturnable<Boolean> cir) {
-        if (irregularchef$manager.getValue((Entity)(Object)this, IrregularChefMod.GLOW_WORMY) > 0) {
+        if (TrackedDataManager.INSTANCE.getValue((Entity)(Object)this, IrregularChefMod.GLOW_WORMY) > 0) {
             cir.setReturnValue(true);
         }
     }

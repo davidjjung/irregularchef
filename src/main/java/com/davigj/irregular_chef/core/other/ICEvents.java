@@ -24,31 +24,31 @@ import vectorwing.farmersdelight.common.block.CookingPotBlock;
 
 @Mod.EventBusSubscriber(modid = IrregularChefMod.MOD_ID)
 public class ICEvents {
-    @SubscribeEvent
-    public static void onChefSlabfish(PlayerInteractEvent.EntityInteract event) {
-        if (ModList.get().isLoaded(ICConstants.ENVIRONMENTAL)) {
-            if (event.getTarget() instanceof Slabfish slabfish && ICConfig.COMMON.chefSlabfish.get()) {
-                BlockState blockStanding = slabfish.getCommandSenderWorld().getBlockState(slabfish.blockPosition());
-                Block block = blockStanding.getBlock();
-                if (block instanceof CookingPotBlock && !slabfish.getSlabfishType().equals(ICConstants.CHEF_SLABFISH)) {
-                    ItemStack stack = event.getItemStack();
-                    if (stack.is(ICItemTags.FANCY_KNIVES)) {
-                        slabfish.setSlabfishType(ICConstants.CHEF_SLABFISH);
-                        if (slabfish.level.isClientSide) {
-                            slabfish.level.addParticle(ICParticleTypes.TOQUE.get(), slabfish.getX(), slabfish.getEyeY() + 0.3, slabfish.getZ(),
-                                    10, 3, 10);
-                            for (int i = 0; i < 4; i++) {
-                                slabfish.level.addParticle(EnvironmentalParticleTypes.TAPIR_FINDS_FLORA.get(), slabfish.getX() + slabfish.getRandom().nextDouble() - 0.5,
-                                        slabfish.getY() + slabfish.getRandom().nextDouble(), slabfish.getZ() + slabfish.getRandom().nextDouble() - 0.5, 0, 0, 0);
-                            }
-                        }
-                        event.getEntity().swing(event.getHand());
-                        event.setCanceled(true);
-                    }
-                }
-            }
-        }
-    }
+//    @SubscribeEvent
+//    public static void onChefSlabfish(PlayerInteractEvent.EntityInteract event) {
+//        if (ModList.get().isLoaded(ICConstants.ENVIRONMENTAL)) {
+//            if (event.getTarget() instanceof Slabfish slabfish && ICConfig.COMMON.chefSlabfish.get()) {
+//                BlockState blockStanding = slabfish.getCommandSenderWorld().getBlockState(slabfish.blockPosition());
+//                Block block = blockStanding.getBlock();
+//                if (block instanceof CookingPotBlock && !slabfish.getSlabfishType().equals(ICConstants.CHEF_SLABFISH)) {
+//                    ItemStack stack = event.getItemStack();
+//                    if (stack.is(ICItemTags.FANCY_KNIVES)) {
+//                        slabfish.setSlabfishType(ICConstants.CHEF_SLABFISH);
+//                        if (slabfish.level.isClientSide) {
+//                            slabfish.level.addParticle(ICParticleTypes.TOQUE.get(), slabfish.getX(), slabfish.getEyeY() + 0.3, slabfish.getZ(),
+//                                    10, 3, 10);
+//                            for (int i = 0; i < 4; i++) {
+//                                slabfish.level.addParticle(EnvironmentalParticleTypes.TAPIR_FINDS_FLORA.get(), slabfish.getX() + slabfish.getRandom().nextDouble() - 0.5,
+//                                        slabfish.getY() + slabfish.getRandom().nextDouble(), slabfish.getZ() + slabfish.getRandom().nextDouble() - 0.5, 0, 0, 0);
+//                            }
+//                        }
+//                        event.getEntity().swing(event.getHand());
+//                        event.setCanceled(true);
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     @SubscribeEvent
     public static void chefFingers(LivingAttackEvent event) {

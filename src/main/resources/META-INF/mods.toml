@@ -7,14 +7,14 @@ license = "MIT License"
 modId = "irregular_chef"
 version = "${file.jarVersion}"
 logoFile = "logo.png"
-itemIcon = "minecraft:dirt"
+itemIcon = "irregular_chef:turtle_gallimaufry_block"
 configBackground = "minecraft:textures/block/dirt.png"
 authors = "DavigJ"
-credits = "Thanks to Evo for spritework, as well as splet, GracefulLion and dannyk11 for varied assistance."
-displayURL = ""
-displayName = "The Irregular Chef"
+credits = "Evo, GracefulLion, splet, dannyk11."
+displayURL = "https://modrinth.com/mod/irregular-chef"
+displayName = "Irregular Chef"
 description = '''
-    A Farmer's Delight add-on that adds some unconventional integration with various other mods.
+    A Farmer's Delight add-on that adds some unconventional foods for cross-mod integration.
     '''
 
 [[dependencies.irregular_chef]]
