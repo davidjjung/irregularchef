@@ -50,24 +50,31 @@ public class ICItems {
 
     public static final RegistryObject<Item> PRICKLY_PUDDING = HELPER.createItem("prickly_pudding", () -> new PricklyPuddingItem(
             new Item.Properties().food(Foods.PRICKLY_PUDDING).craftRemainder(Items.BOWL).stacksTo(16)
-                    .tab((isModLoaded(ICConstants.ECOLOGICS) && isModLoaded(ICConstants.SUPPLEMENTARIES)) ? CreativeModeTab.TAB_FOOD : null), false, true));
+                    .tab(
+//                            (isModLoaded(ICConstants.ECOLOGICS) && isModLoaded(ICConstants.SUPPLEMENTARIES)) ? CreativeModeTab.TAB_FOOD :
+                                    null), false, true));
 
     public static final RegistryObject<Item> BELT_SPAGHETTI = HELPER.createItem("belt_spaghetti", () -> new ConsumableItem(
             new Item.Properties().food(Foods.BELT_SPAGHETTI).craftRemainder(Items.BOWL).stacksTo(16)
-                    .tab(isModLoaded(ICConstants.CREATE) ? CreativeModeTab.TAB_FOOD : null), true, false));
+                    .tab(
+//                            isModLoaded(ICConstants.CREATE) ? CreativeModeTab.TAB_FOOD :
+                                    null), true, false));
 
 
     // Uncontained Foods (they do as they please.)
     public static final RegistryObject<Item> HUNTERS_JERKY = HELPER.createItem("hunters_jerky", () -> new HuntersJerkyItem(
-            new Item.Properties().food(Foods.HUNTERS_JERKY).tab(isModLoaded(ICConstants.SPELUNKERY) ? CreativeModeTab.TAB_FOOD : null)));
+            new Item.Properties().food(Foods.HUNTERS_JERKY).tab(
+//                    isModLoaded(ICConstants.SPELUNKERY) ? CreativeModeTab.TAB_FOOD :
+                            null)));
 
     public static final RegistryObject<Item> STEAMED_BEEF_WRAP = HELPER.createItem("steamed_beef_wrap", () -> new SteamedBeefWrapItem(
             new Item.Properties().food(Foods.STEAMED_BEEF_WRAP).tab(isModLoaded(ICConstants.NEAPOLITAN) ? CreativeModeTab.TAB_FOOD : null),
             ICConstants.NEAPOLITAN, ICConstants.AGILITY, 600, 0, false));
 
     public static final RegistryObject<Item> TRAFFIC_JAM_ROLL = HELPER.createItem("traffic_jam_roll", () -> new TrafficJamRollItem(
-            new Item.Properties().food(Foods.TRAFFIC_JAM_ROLL).tab((isModLoaded(ICConstants.UPGRADE_AQUATIC)
-                    && isModLoaded(ICConstants.ATMOSPHERIC)) ? CreativeModeTab.TAB_FOOD : null)));
+            new Item.Properties().food(Foods.TRAFFIC_JAM_ROLL).tab(
+//                    (isModLoaded(ICConstants.UPGRADE_AQUATIC) && isModLoaded(ICConstants.ATMOSPHERIC)) ? CreativeModeTab.TAB_FOOD :
+                            null)));
 
     public static final RegistryObject<Item> POOL_PARTY_STICK = HELPER.createItem("pool_party_stick", () -> new PoolPartyStickItem(
             new Item.Properties().food(Foods.POOL_PARTY_STICK).tab(isModLoaded(ICConstants.UPGRADE_AQUATIC) ? CreativeModeTab.TAB_FOOD : null), false, true));
@@ -80,19 +87,27 @@ public class ICItems {
             new Item.Properties().food(Foods.TURKEY_POT_PIE_SLICE).tab(isModLoaded(ICConstants.AUTUMNITY) ? CreativeModeTab.TAB_FOOD : null), true, false));
 
     public static final RegistryObject<Item> HUMBLE_PIE = HELPER.createItem("humble_pie", () -> new BlockItem(
-            ICBlocks.HUMBLE_PIE.get(), new Item.Properties().stacksTo(16).tab(isModLoaded(ICConstants.ECOLOGICS) ? CreativeModeTab.TAB_FOOD : null)));
+            ICBlocks.HUMBLE_PIE.get(), new Item.Properties().stacksTo(16).tab(
+//                    isModLoaded(ICConstants.ECOLOGICS) ? CreativeModeTab.TAB_FOOD :
+                            null)));
     public static final RegistryObject<Item> HUMBLE_PIE_SLICE = HELPER.createItem("humble_pie_slice", () -> new HumblePieSlice(
-            new Item.Properties().food(Foods.HUMBLE_PIE_SLICE).tab(isModLoaded(ICConstants.ECOLOGICS) ? CreativeModeTab.TAB_FOOD : null), false, true));
+            new Item.Properties().food(Foods.HUMBLE_PIE_SLICE).tab(
+//                    isModLoaded(ICConstants.ECOLOGICS) ? CreativeModeTab.TAB_FOOD :
+                    null), false, true));
 
     public static final RegistryObject<Item> TURTLE_GALLIMAUFRY = HELPER.createItem("turtle_gallimaufry", () -> new ConsumableItem(
             new Item.Properties().food(Foods.TURTLE_GALLIMAUFRY).craftRemainder(Items.BOWL).stacksTo(16).tab(CreativeModeTab.TAB_FOOD), true));
     public static final RegistryObject<Item> TURTLE_GALLIMAUFRY_BLOCK = HELPER.createItem("turtle_gallimaufry_block", () -> new BlockItem(
             ICBlocks.TURTLE_GALLIMAUFRY_BLOCK.get(), new Item.Properties().stacksTo(1).craftRemainder(Items.TURTLE_HELMET).tab(CreativeModeTab.TAB_FOOD)));
     public static final RegistryObject<Item> SURF_AND_TURF = HELPER.createItem("surf_and_turf", () -> new ConsumableItem(
-            new Item.Properties().food(Foods.SURF_AND_TURF).craftRemainder(Items.BOWL).stacksTo(16).tab(CreativeModeTab.TAB_FOOD), true));
+            new Item.Properties().food(Foods.SURF_AND_TURF).craftRemainder(Items.BOWL).stacksTo(16).tab(
+//                    isSurfAndTurf() ? CreativeModeTab.TAB_FOOD :
+                    null), true));
     public static final RegistryObject<Item> SURF_AND_TURF_BLOCK = HELPER.createItem("surf_and_turf_block", () -> new BlockItem(
             ICBlocks.SURF_AND_TURF_BLOCK.get(), new Item.Properties().stacksTo(1).craftRemainder(getCompatItem(ICConstants.UPGRADE_AQUATIC, ICConstants.BEACHGRASS).get())
-            .tab(isSurfAndTurf() ? CreativeModeTab.TAB_FOOD : null)));
+            .tab(
+//                    isSurfAndTurf() ? CreativeModeTab.TAB_FOOD :
+                            null)));
 
     private static boolean isSurfAndTurf() {
         return (isModLoaded(ICConstants.ECOLOGICS) || isModLoaded(ICConstants.ALEXSMOBS) || isModLoaded(ICConstants.QUARK) || isModLoaded(ICConstants.CRABBERSDELIGHT))
@@ -115,7 +130,7 @@ public class ICItems {
 
         public static final FoodProperties HUNTERS_JERKY = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F)
                 .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 20 * 10, 0, true, false), 1.0F).build();
-        public static final FoodProperties STEAMED_BEEF_WRAP = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.8F)
+        public static final FoodProperties STEAMED_BEEF_WRAP = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F)
                 .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 2400), 1.0F).build();
 
         public static final FoodProperties TRAFFIC_JAM_ROLL = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.8F)

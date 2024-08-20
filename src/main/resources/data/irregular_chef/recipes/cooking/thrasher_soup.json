@@ -5,16 +5,16 @@
       "tag": "forge:pasta"
     },
     {
-      "item": "upgrade_aquatic:thrasher_tooth"
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "tag": "forge:raw_duck"
     },
     {
       "tag": "forge:eggs"
     },
     {
-      "item": "minecraft:red_mushroom"
-    },
-    {
-      "tag": "forge:raw_duck"
+      "item": "upgrade_aquatic:thrasher_tooth"
     }
   ],
   "result": {

@@ -1,9 +1,9 @@
 package com.davigj.irregular_chef.common.item;
 
-import com.davigj.irregular_chef.core.util.TextUtils;
+import com.davigj.irregular_chef.core.IrregularChefMod;
+import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedDataManager;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -24,12 +24,13 @@ public class DirtCupItem extends ConsumableItem {
         super(properties);
     }
 
-    public void affectConsumer(ItemStack stack, Level worldIn, LivingEntity consumer) {
-        if (consumer.getCommandSenderWorld().dimensionType().effectsLocation().toString().equals("minecraft:overworld") &&
-                ((consumer.blockPosition().getY() <= 62 && !consumer.isInFluidType()) ||
-                        (worldIn.isRainingAt(consumer.blockPosition()) && !consumer.hasImpulse))) {
+    public void affectConsumer(ItemStack stack, Level level, LivingEntity consumer) {
+        if (level.dimension() == Level.OVERWORLD &&
+                ((consumer.getY() <= level.getSeaLevel() && !level.canSeeSky(consumer.blockPosition())) ||
+                        (level.isRainingAt(consumer.blockPosition())))) {
             int duration = 128 - consumer.blockPosition().getY();
             consumer.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, duration * 10, 0));
+            TrackedDataManager.INSTANCE.setValue(consumer, IrregularChefMod.GLOW_WORMY, duration * 10);
         }
     }
 

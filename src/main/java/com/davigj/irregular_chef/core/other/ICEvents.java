@@ -4,14 +4,18 @@ import com.davigj.irregular_chef.core.ICConfig;
 import com.davigj.irregular_chef.core.IrregularChefMod;
 import com.davigj.irregular_chef.core.other.tags.ICItemTags;
 import com.davigj.irregular_chef.core.registry.ICParticleTypes;
+import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedDataManager;
 import com.teamabnormals.environmental.common.entity.animal.slabfish.Slabfish;
 import com.teamabnormals.environmental.core.registry.EnvironmentalParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
@@ -34,7 +38,7 @@ public class ICEvents {
                             slabfish.level.addParticle(ICParticleTypes.TOQUE.get(), slabfish.getX(), slabfish.getEyeY() + 0.3, slabfish.getZ(),
                                     10, 3, 10);
                             for (int i = 0; i < 4; i++) {
-                                slabfish.level.addParticle(EnvironmentalParticleTypes.SLABFISH_FINDS_EFFIGY.get(), slabfish.getX() + slabfish.getRandom().nextDouble() - 0.5,
+                                slabfish.level.addParticle(EnvironmentalParticleTypes.TAPIR_FINDS_FLORA.get(), slabfish.getX() + slabfish.getRandom().nextDouble() - 0.5,
                                         slabfish.getY() + slabfish.getRandom().nextDouble(), slabfish.getZ() + slabfish.getRandom().nextDouble() - 0.5, 0, 0, 0);
                             }
                         }
@@ -59,4 +63,23 @@ public class ICEvents {
         }
     }
 
+    @SubscribeEvent
+    public static void glow(TickEvent.PlayerTickEvent event) {
+        TrackedDataManager manager = TrackedDataManager.INSTANCE;
+        int glowy = manager.getValue(event.player, IrregularChefMod.GLOW_WORMY);
+        if (glowy > 0) {
+            manager.setValue(event.player, IrregularChefMod.GLOW_WORMY, glowy - 1);
+        }
+    }
+
+    @SubscribeEvent
+    public static void resetGlow(LivingDeathEvent event) {
+        if (event.getEntity() instanceof Player player) {
+            TrackedDataManager manager = TrackedDataManager.INSTANCE;
+            int glowy = manager.getValue(player, IrregularChefMod.GLOW_WORMY);
+            if (glowy > 0) {
+                manager.setValue(player, IrregularChefMod.GLOW_WORMY, 0);
+            }
+        }
+    }
 }
