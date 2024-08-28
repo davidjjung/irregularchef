@@ -101,7 +101,7 @@ public class TurtleGallimaufryBlock extends Block implements SimpleWaterloggedBl
     }
 
     public boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos) {
-        return worldIn.getBlockState(pos.below()).getMaterial().isSolid();
+        return worldIn.getBlockState(pos.below()).isSolid();
     }
 
     static {
@@ -121,7 +121,7 @@ public class TurtleGallimaufryBlock extends Block implements SimpleWaterloggedBl
             ItemStack serving = this.getServingItem();
             ItemStack heldStack = player.getItemInHand(handIn);
             if (servings > 0) {
-                if (heldStack.sameItem(serving.getCraftingRemainingItem())) {
+                if (ItemStack.isSameItem(heldStack, serving.getCraftingRemainingItem())) {
                     worldIn.setBlock(pos, (BlockState)state.setValue(SERVINGS, servings - 1), 3);
                     if (!player.getAbilities().instabuild) {
                         heldStack.shrink(1);
@@ -138,8 +138,9 @@ public class TurtleGallimaufryBlock extends Block implements SimpleWaterloggedBl
                     worldIn.playSound((Player)null, pos, SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.BLOCKS, 1.0F, 1.0F);
                     return InteractionResult.SUCCESS;
                 }
-                else if ((heldStack.sameItem(Items.WATER_BUCKET.getDefaultInstance()) && !state.getValue(WATERLOGGED))
-                        || (heldStack.sameItem(Items.BUCKET.getDefaultInstance()) && state.getValue(WATERLOGGED))) {
+                else if ((ItemStack.isSameItem(heldStack, Items.WATER_BUCKET.getDefaultInstance())
+                        && !state.getValue(WATERLOGGED)) || ((ItemStack.isSameItem(heldStack, Items.BUCKET.getDefaultInstance())
+                        && state.getValue(WATERLOGGED)))) {
                     return InteractionResult.PASS;
                 }
 

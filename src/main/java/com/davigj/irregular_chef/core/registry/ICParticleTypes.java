@@ -5,6 +5,7 @@ import com.davigj.irregular_chef.core.IrregularChefMod;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,8 +18,8 @@ public class ICParticleTypes {
 
     public static final RegistryObject<SimpleParticleType> TOQUE = PARTICLE_TYPES.register("toque", () -> new SimpleParticleType(true));
 
-    @SubscribeEvent
-    public static void registerParticleTypes(RegisterParticleProvidersEvent event) {
-        event.register(ICParticleTypes.TOQUE.get(), ToqueParticle.Factory::new);
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
+        event.registerSpriteSet(ICParticleTypes.TOQUE.get(), ToqueParticle.Factory::new);
     }
 }

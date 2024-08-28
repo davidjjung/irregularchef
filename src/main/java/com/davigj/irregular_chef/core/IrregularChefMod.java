@@ -1,15 +1,18 @@
 package com.davigj.irregular_chef.core;
 
 import com.davigj.irregular_chef.core.other.ICConstants;
+import com.davigj.irregular_chef.core.registry.ICItems;
 import com.davigj.irregular_chef.core.registry.ICParticleTypes;
 import com.teamabnormals.blueprint.common.world.storage.tracking.DataProcessors;
 import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedData;
 import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedDataManager;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -32,6 +35,8 @@ public class IrregularChefMod {
         MinecraftForge.EVENT_BUS.register(this);
 
 		REGISTRY_HELPER.register(bus);
+
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> ICItems::buildCreativeTabContents);
 
         ICParticleTypes.PARTICLE_TYPES.register(bus);
 

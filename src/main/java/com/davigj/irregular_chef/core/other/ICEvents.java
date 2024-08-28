@@ -5,8 +5,6 @@ import com.davigj.irregular_chef.core.IrregularChefMod;
 import com.davigj.irregular_chef.core.other.tags.ICItemTags;
 import com.davigj.irregular_chef.core.registry.ICParticleTypes;
 import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedDataManager;
-import com.teamabnormals.environmental.common.entity.animal.slabfish.Slabfish;
-import com.teamabnormals.environmental.core.registry.EnvironmentalParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.player.Player;
@@ -50,18 +48,18 @@ public class ICEvents {
 //        }
 //    }
 
-    @SubscribeEvent
-    public static void chefFingers(LivingAttackEvent event) {
-        if (ModList.get().isLoaded(ICConstants.ENVIRONMENTAL)) {
-            if (event.getEntity() instanceof Slabfish slabfish) {
-                if (slabfish.getSlabfishType().equals(new ResourceLocation(IrregularChefMod.MOD_ID, ICConstants.CHEF))
-                && event.getSource().isFire() && !(event.getSource().equals(DamageSource.LAVA))) {
-                    slabfish.setSecondsOnFire(0);
-                    event.setCanceled(true);
-                }
-            }
-        }
-    }
+//    @SubscribeEvent
+//    public static void chefFingers(LivingAttackEvent event) {
+//        if (ModList.get().isLoaded(ICConstants.ENVIRONMENTAL)) {
+//            if (event.getEntity() instanceof Slabfish slabfish) {
+//                if (slabfish.getSlabfishType().equals(new ResourceLocation(IrregularChefMod.MOD_ID, ICConstants.CHEF))
+//                && event.getSource().isFire() && !(event.getSource().equals(DamageSource.LAVA))) {
+//                    slabfish.setSecondsOnFire(0);
+//                    event.setCanceled(true);
+//                }
+//            }
+//        }
+//    }
 
     @SubscribeEvent
     public static void glow(TickEvent.PlayerTickEvent event) {
