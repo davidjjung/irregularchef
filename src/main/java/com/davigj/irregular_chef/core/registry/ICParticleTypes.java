@@ -1,5 +1,6 @@
 package com.davigj.irregular_chef.core.registry;
 
+import com.davigj.irregular_chef.client.particle.FluffParticle;
 import com.davigj.irregular_chef.client.particle.ToqueParticle;
 import com.davigj.irregular_chef.core.IrregularChefMod;
 import net.minecraft.core.particles.ParticleType;
@@ -17,9 +18,11 @@ public class ICParticleTypes {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, IrregularChefMod.MOD_ID);
 
     public static final RegistryObject<SimpleParticleType> TOQUE = PARTICLE_TYPES.register("toque", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> FLUFF = PARTICLE_TYPES.register("fluff", () -> new SimpleParticleType(true));
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(ICParticleTypes.TOQUE.get(), ToqueParticle.Factory::new);
+        event.registerSpriteSet(ICParticleTypes.FLUFF.get(), FluffParticle.Factory::new);
     }
 }

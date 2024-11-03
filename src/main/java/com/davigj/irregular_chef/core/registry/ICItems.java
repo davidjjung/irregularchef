@@ -54,6 +54,9 @@ public class ICItems {
     public static final RegistryObject<Item> POOL_PARTY_STICK = HELPER.createItem("pool_party_stick", () -> new PoolPartyStickItem(
             new Item.Properties().food(Foods.POOL_PARTY_STICK), false, true));
 
+    public static final RegistryObject<Item> SWAMP_DOG = HELPER.createItem("swamp_dog", () -> new SwampDogItem(
+            new Item.Properties().food(Foods.SWAMP_DOG), false, true));
+
     // Blocky foods
     public static final RegistryObject<Item> TURKEY_POT_PIE = HELPER.createItem("turkey_pot_pie", () -> new BlockItem(
             ICBlocks.TURKEY_POT_PIE.get(), new Item.Properties().stacksTo(16)));
@@ -93,13 +96,11 @@ public class ICItems {
         public static final FoodProperties SURF_AND_TURF = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.8F)
                 .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 300 * 20, 0, false, true), 1.0F).build();
 
-        public static final FoodProperties HUNTERS_JERKY = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F)
-                .effect(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 20 * 10, 0, true, false), 1.0F).build();
         public static final FoodProperties STEAMED_BEEF_WRAP = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F)
                 .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 2400), 1.0F).build();
 
-        public static final FoodProperties TRAFFIC_JAM_ROLL = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.8F)
-                .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100), 1.0F).build();
+        public static final FoodProperties SWAMP_DOG = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.4F).build();
+
         public static final FoodProperties POOL_PARTY_STICK = (new FoodProperties.Builder()).nutrition(9).saturationMod(0.6F).build();
         public static final FoodProperties PURPLE_COW_FLOAT = (new FoodProperties.Builder()).nutrition(0).saturationMod(0.0F).alwaysEat()
                 .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 20 * 15), 1.0F).build();
@@ -119,6 +120,7 @@ public class ICItems {
         CreativeModeTabContentsPopulator.mod(IrregularChefMod.MOD_ID)
                 .tab(CreativeModeTabs.FOOD_AND_DRINKS)
                 .addItemsAfter(of(Items.RABBIT_STEW), BIRDS_NEST_SOUP, THRASHER_SOUP, BELT_SPAGHETTI, POOL_PARTY_STICK,
+                        SWAMP_DOG,
                         DIRT_CUP, PURPLE_COW_FLOAT, HUMBLE_PIE, HUMBLE_PIE_SLICE, TURKEY_POT_PIE, TURKEY_POT_PIE_SLICE,
                         TURTLE_GALLIMAUFRY, TURTLE_GALLIMAUFRY_BLOCK);
     }
