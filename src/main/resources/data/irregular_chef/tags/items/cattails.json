@@ -2,15 +2,15 @@
   "replace": false,
   "values": [
     {
-      "id": "minecraft:glow_berries",
+      "id": "naturalist:cattail",
       "required": false
     },
     {
-      "id": "windswept:holly_berries",
+      "id": "goodending:cattail",
       "required": false
     },
     {
-      "id": "autumnity:foul_berries",
+      "id": "environmental:cattail",
       "required": false
     }
   ]

@@ -1,0 +1,39 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "autumnity"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "autumnity:snail_goo"
+    },
+    {
+      "item": "autumnity:snail_goo"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "irregular_chef:stewed_chimp_head_block"
+  },
+  "container": {
+    "item": "neapolitan:chimpanzee_head",
+    "damage": "0"
+  },
+  "cookingtime": 600,
+  "experience": 2.0
+}

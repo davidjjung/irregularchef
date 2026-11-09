@@ -31,7 +31,7 @@ public class PoolPartyStickItem extends ConsumableItem {
 
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        if ((Boolean) Configuration.FOOD_EFFECT_TOOLTIP.get()) {
+        if ((Boolean) Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
             if (hasCustomTooltip) {
                 MutableComponent textEmpty = com.davigj.irregular_chef.core.util.TextUtils.getTranslation("tooltip." + this, new Object[0]);
                 tooltip.add(textEmpty.withStyle(ChatFormatting.BLUE));

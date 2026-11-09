@@ -6,6 +6,7 @@ import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import vectorwing.farmersdelight.common.block.PieBlock;
@@ -23,4 +24,7 @@ public class ICBlocks {
 
     public static final RegistryObject<Block> SURF_AND_TURF_BLOCK = HELPER.createBlockNoItem("surf_and_turf_block", () -> new SurfAndTurfBlock(
             Block.Properties.copy(Blocks.CAKE), ICItems.SURF_AND_TURF, true));
+
+    public static final RegistryObject<Block> STEWED_CHIMP_HEAD_BLOCK = HELPER.createBlockNoItem("stewed_chimp_head_block", () -> new StewedChimpHeadBlock(
+            Block.Properties.copy(Blocks.SKELETON_SKULL).mapColor(MapColor.COLOR_BLACK)));
 }

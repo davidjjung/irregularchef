@@ -35,7 +35,7 @@ public class SteamedBeefWrapItem extends CompatEffectItem{
 
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag isAdvanced) {
-        if ((Boolean) Configuration.FOOD_EFFECT_TOOLTIP.get()) {
+        if ((Boolean) Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
             if (ModList.get().isLoaded(ICConstants.NEAPOLITAN)) {
                 MobEffectInstance instance = new MobEffectInstance(new MobEffectInstance(getCompatEffect(modid, effect).get(), duration, amplifier));
                 tooltip.add(Component.translatable(instance.getDescriptionId()).append(" (0:30)").withStyle(ChatFormatting.BLUE));

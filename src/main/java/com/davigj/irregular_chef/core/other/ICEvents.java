@@ -1,32 +1,25 @@
 package com.davigj.irregular_chef.core.other;
 
-import com.davigj.irregular_chef.client.particle.FluffParticle;
-import com.davigj.irregular_chef.core.ICConfig;
+import com.davigj.irregular_chef.common.entity.ai.goal.MmmBrainsGoal;
 import com.davigj.irregular_chef.core.IrregularChefMod;
-import com.davigj.irregular_chef.core.other.tags.ICItemTags;
 import com.davigj.irregular_chef.core.registry.ICParticleTypes;
 import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedDataManager;
-import net.minecraft.core.particles.ItemParticleOption;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.Chicken;
+import net.minecraft.world.entity.animal.PolarBear;
+import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
-import vectorwing.farmersdelight.common.block.CookingPotBlock;
 
 @Mod.EventBusSubscriber(modid = IrregularChefMod.MOD_ID)
 public class ICEvents {
@@ -76,7 +69,6 @@ public class ICEvents {
         if (glowy > 0) {
             manager.setValue(event.player, IrregularChefMod.GLOW_WORMY, glowy - 1);
         }
-
     }
 
 
@@ -114,6 +106,16 @@ public class ICEvents {
             int doggy = manager.getValue(player, IrregularChefMod.SWAMP_DOGGY);
             if (doggy > 0) {
                 manager.setValue(player, IrregularChefMod.SWAMP_DOGGY, 0);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void zombiesEat(EntityJoinLevelEvent event) {
+        Entity entity = event.getEntity();
+        if (entity instanceof LivingEntity living) {
+            if (entity instanceof Zombie zombie) {
+                zombie.goalSelector.addGoal(1, new MmmBrainsGoal(zombie, 1.0D));
             }
         }
     }

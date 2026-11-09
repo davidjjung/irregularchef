@@ -1,5 +1,6 @@
 package com.davigj.irregular_chef.core;
 
+import com.davigj.irregular_chef.core.other.ICClientCompat;
 import com.davigj.irregular_chef.core.other.ICConstants;
 import com.davigj.irregular_chef.core.registry.ICItems;
 import com.davigj.irregular_chef.core.registry.ICParticleTypes;
@@ -57,6 +58,7 @@ public class IrregularChefMod {
 
     private void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
+            ICClientCompat.registerRenderLayers();
         });
     }
 

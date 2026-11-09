@@ -32,7 +32,7 @@ public class HumblePieSlice extends ConsumableItem {
 
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        if ((Boolean) Configuration.FOOD_EFFECT_TOOLTIP.get()) {
+        if ((Boolean) Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
             tooltip.add(Component.translatable("irregular_chef.tooltip.eat_humble_pie_slice").withStyle(ChatFormatting.GRAY));
             tooltip.add(Component.empty().append(" ").append(Component.translatable(ModEffects.COMFORT.get().getDescriptionId()).append(" (1:00)").withStyle(ChatFormatting.BLUE)));
             tooltip.add(Component.empty().append(" ").append(Component.translatable(MobEffects.DAMAGE_RESISTANCE.getDescriptionId()).append(" II (0:30)").withStyle(ChatFormatting.BLUE)));

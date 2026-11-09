@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "tag": "irregular_chef:cattails"
+    },
+    {
+      "tag": "irregular_chef:cattails"
+    }
+  ],
+  "result": {
+    "item": "irregular_chef:swamp_dog",
+    "count": 2
+  }
+}

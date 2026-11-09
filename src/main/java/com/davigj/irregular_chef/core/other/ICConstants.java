@@ -22,6 +22,7 @@ public class ICConstants {
     public static final ResourceLocation AGILITY = new ResourceLocation(NEAPOLITAN, "agility");
 
     public static final ResourceLocation BEACHGRASS = new ResourceLocation(UPGRADE_AQUATIC, "beachgrass");
+    public static final ResourceLocation CHIMPANZEE_HEAD = new ResourceLocation(NEAPOLITAN, "chimpanzee_head");
 
     public static final String CHEF = "chef";
 

@@ -76,6 +76,8 @@ public class ICItems {
             new Item.Properties().food(Foods.SURF_AND_TURF).craftRemainder(Items.BOWL).stacksTo(16), true));
     public static final RegistryObject<Item> SURF_AND_TURF_BLOCK = HELPER.createItem("surf_and_turf_block", () -> new BlockItem(
             ICBlocks.SURF_AND_TURF_BLOCK.get(), new Item.Properties().stacksTo(1).craftRemainder(getCompatItem(ICConstants.UPGRADE_AQUATIC, ICConstants.BEACHGRASS).get())));
+    public static final RegistryObject<Item> STEWED_CHIMP_HEAD_BLOCK = HELPER.createItem("stewed_chimp_head_block", () -> new BlockItem(
+            ICBlocks.STEWED_CHIMP_HEAD_BLOCK.get(), new Item.Properties().stacksTo(1).craftRemainder(getCompatItem(ICConstants.NEAPOLITAN, ICConstants.CHIMPANZEE_HEAD).get())));
 
     private static boolean isSurfAndTurf() {
         return (isModLoaded(ICConstants.ECOLOGICS) || isModLoaded(ICConstants.ALEXSMOBS) || isModLoaded(ICConstants.QUARK) || isModLoaded(ICConstants.CRABBERSDELIGHT))
@@ -84,7 +86,7 @@ public class ICItems {
 
     static class Foods {
         public static final FoodProperties BIRDS_NEST_SOUP = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.6F)
-                .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), (int) ((60 * 6.5) * 20)), 1.0F).build();
+                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), (int) ((60 * 6.5) * 20)), 1.0F).build();
         public static final FoodProperties THRASHER_SOUP = (new FoodProperties.Builder()).nutrition(7).saturationMod(0.7F)
                 .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 20 * 15, 0, false, true), 1.0F)
                 .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 18, 2, false, true), 1.0F).build();
@@ -109,8 +111,7 @@ public class ICItems {
                 .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1800), 1.0F)
                 .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1.0F).build();
         public static final FoodProperties TURKEY_POT_PIE_SLICE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.25F).fast().
-                effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 300), 1.0F)
-                .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 600), 1.0F).build();
+                effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 500), 1.0F).build();
         public static final FoodProperties HUMBLE_PIE_SLICE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.5F).fast().build();
 
         //        public static final FoodProperties LAVENDER_MASHED_POTATOES = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.7F).effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1200), 1.0F).build();
@@ -120,8 +121,8 @@ public class ICItems {
         CreativeModeTabContentsPopulator.mod(IrregularChefMod.MOD_ID)
                 .tab(CreativeModeTabs.FOOD_AND_DRINKS)
                 .addItemsAfter(of(Items.RABBIT_STEW), BIRDS_NEST_SOUP, THRASHER_SOUP, BELT_SPAGHETTI, POOL_PARTY_STICK,
-                        SWAMP_DOG,
+                        SWAMP_DOG, STEAMED_BEEF_WRAP,
                         DIRT_CUP, PURPLE_COW_FLOAT, HUMBLE_PIE, HUMBLE_PIE_SLICE, TURKEY_POT_PIE, TURKEY_POT_PIE_SLICE,
-                        TURTLE_GALLIMAUFRY, TURTLE_GALLIMAUFRY_BLOCK);
+                        TURTLE_GALLIMAUFRY, TURTLE_GALLIMAUFRY_BLOCK, STEWED_CHIMP_HEAD_BLOCK);
     }
 }

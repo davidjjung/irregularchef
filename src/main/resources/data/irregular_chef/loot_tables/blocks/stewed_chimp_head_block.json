@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "pool1",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irregular_chef:stewed_chimp_head_block"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "irregular_chef:stewed_chimp_head_block",
+          "properties": {
+            "servings": "4"
+          }
+        }
+      ]
+    },
+    {
+      "name": "pool2",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "neapolitan:chimpanzee_head"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:block_state_property",
+            "block": "irregular_chef:stewed_chimp_head_block",
+            "properties": {
+              "servings": "4"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

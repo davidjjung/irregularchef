@@ -78,7 +78,7 @@ sourceSets.main.resources {
 dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
     implementation fg.deobf("com.teamabnormals:blueprint:${project.minecraft}-${project.blueprint}")
-    implementation fg.deobf("maven.modrinth:farmers-delight:k7RoRFPF")
+    implementation fg.deobf("maven.modrinth:farmers-delight:SiIpcZzM")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.0"))
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.0")) {
@@ -87,6 +87,9 @@ dependencies {
 
     runtimeOnly fg.deobf("maven.modrinth:neapolitan:5.0.0")
     runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:6.0.1")
+    runtimeOnly fg.deobf("maven.modrinth:autumnity:5.0.1")
+    runtimeOnly fg.deobf("maven.modrinth:environmental:4.1.2")
+
     runtimeOnly fg.deobf("maven.modrinth:ferrite-core:6.0.1")
     runtimeOnly fg.deobf("maven.modrinth:modernfix:m83ZRQdk")
 
@@ -102,7 +105,6 @@ dependencies {
 //    runtimeOnly fg.deobf("maven.modrinth:twigs:3.0.1")
 //    runtimeOnly fg.deobf("maven.modrinth:spelunkery:1.19.2-0.2.6-forge")
 //    runtimeOnly fg.deobf("maven.modrinth:ecologics:hOFm4e6B")
-//    runtimeOnly fg.deobf("maven.modrinth:autumnity:4.0.1")
 //    runtimeOnly fg.deobf("maven.modrinth:incubation:3.0.1")
 //    runtimeOnly fg.deobf("maven.modrinth:abnormals-delight:4.1.0")
 //    runtimeOnly fg.deobf("maven.modrinth:moonlight:1.19.2-2.3.4-forge")
@@ -117,7 +119,7 @@ dependencies {
 }
 
 repositories {
-    maven { url "https://maven.jaackson.me" }
+    maven { url "https://maven.teamabnormals.com" }
     maven { url "https://dvs1.progwml6.com/files/maven/" }
     maven { url "https://modmaven.k-4u.nl" }
     maven { url "https://www.cursemaven.com" }

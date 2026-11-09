@@ -36,7 +36,7 @@ public class DirtCupItem extends ConsumableItem {
 
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        if ((Boolean) Configuration.FOOD_EFFECT_TOOLTIP.get()) {
+        if ((Boolean) Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
             tooltip.add(Component.translatable("irregular_chef.tooltip.eat_dirt_cup").withStyle(ChatFormatting.GRAY));
             tooltip.add(Component.empty().append(" ").append(Component.translatable(MobEffects.NIGHT_VISION.getDescriptionId()).append(" (0:30+)").withStyle(ChatFormatting.BLUE)));
         }
