@@ -96,27 +96,10 @@ public class ICEvents {
     }
 
     @SubscribeEvent
-    public static void resetGlow(LivingDeathEvent event) {
-        if (event.getEntity() instanceof Player player) {
-            TrackedDataManager manager = TrackedDataManager.INSTANCE;
-            int glowy = manager.getValue(player, IrregularChefMod.GLOW_WORMY);
-            if (glowy > 0) {
-                manager.setValue(player, IrregularChefMod.GLOW_WORMY, 0);
-            }
-            int doggy = manager.getValue(player, IrregularChefMod.SWAMP_DOGGY);
-            if (doggy > 0) {
-                manager.setValue(player, IrregularChefMod.SWAMP_DOGGY, 0);
-            }
-        }
-    }
-
-    @SubscribeEvent
     public static void zombiesEat(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof LivingEntity living) {
-            if (entity instanceof Zombie zombie) {
-                zombie.goalSelector.addGoal(1, new MmmBrainsGoal(zombie, 1.0D));
-            }
+        if (entity instanceof Zombie zombie) {
+            zombie.goalSelector.addGoal(1, new MmmBrainsGoal(zombie, 1.0D));
         }
     }
 }
