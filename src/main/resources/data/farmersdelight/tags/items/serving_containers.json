@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "neapolitan:banana_frond",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chimpanzee_head",
+      "required": false
+    }
+  ]
+}

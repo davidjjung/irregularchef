@@ -89,6 +89,7 @@ dependencies {
     runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:6.0.1")
     runtimeOnly fg.deobf("maven.modrinth:autumnity:5.0.1")
     runtimeOnly fg.deobf("maven.modrinth:environmental:4.1.2")
+    runtimeOnly fg.deobf("maven.modrinth:windswept:EpQ7XVgX")
 
     runtimeOnly fg.deobf("maven.modrinth:ferrite-core:6.0.1")
     runtimeOnly fg.deobf("maven.modrinth:modernfix:m83ZRQdk")

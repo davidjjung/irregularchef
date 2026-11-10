@@ -55,7 +55,7 @@ public class ICItems {
             new Item.Properties().food(Foods.POOL_PARTY_STICK), false, true));
 
     public static final RegistryObject<Item> SWAMP_DOG = HELPER.createItem("swamp_dog", () -> new SwampDogItem(
-            new Item.Properties().food(Foods.SWAMP_DOG), false, true));
+            new Item.Properties().food(Foods.SWAMP_DOG), false, false));
 
     // Blocky foods
     public static final RegistryObject<Item> TURKEY_POT_PIE = HELPER.createItem("turkey_pot_pie", () -> new BlockItem(
@@ -86,7 +86,7 @@ public class ICItems {
 
     static class Foods {
         public static final FoodProperties BIRDS_NEST_SOUP = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.6F)
-                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), (int) ((60 * 6.5) * 20)), 1.0F).build();
+                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), (int) ((60 * 5) * 20)), 1.0F).build();
         public static final FoodProperties THRASHER_SOUP = (new FoodProperties.Builder()).nutrition(7).saturationMod(0.7F)
                 .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 20 * 15, 0, false, true), 1.0F)
                 .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 18, 2, false, true), 1.0F).build();
@@ -94,12 +94,12 @@ public class ICItems {
         public static final FoodProperties PRICKLY_PUDDING = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F).build();
         public static final FoodProperties BELT_SPAGHETTI = (new FoodProperties.Builder()).nutrition(13).saturationMod(0.8F)
                 .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 90 * 20, 1, false, true), 1.0F)
-                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 180 * 20, 0, false, true), 1.0F).build();
+                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 180 * 20, 0, false, false), 1.0F).build();
         public static final FoodProperties SURF_AND_TURF = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.8F)
                 .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 300 * 20, 0, false, true), 1.0F).build();
 
         public static final FoodProperties STEAMED_BEEF_WRAP = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F)
-                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 2400), 1.0F).build();
+                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 2400, 0, false, false), 1.0F).build();
 
         public static final FoodProperties SWAMP_DOG = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.4F).build();
 
@@ -109,9 +109,9 @@ public class ICItems {
 
         public static final FoodProperties TURTLE_GALLIMAUFRY = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.7F)
                 .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1800), 1.0F)
-                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1.0F).build();
+                .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000, 0, false, false), 1.0F).build();
         public static final FoodProperties TURKEY_POT_PIE_SLICE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.25F).fast().
-                effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 500), 1.0F).build();
+                effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 500, 0, false, false), 1.0F).build();
         public static final FoodProperties HUMBLE_PIE_SLICE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.5F).fast().build();
 
         //        public static final FoodProperties LAVENDER_MASHED_POTATOES = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.7F).effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 1200), 1.0F).build();

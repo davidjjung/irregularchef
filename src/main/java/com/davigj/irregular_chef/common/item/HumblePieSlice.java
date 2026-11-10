@@ -26,7 +26,7 @@ public class HumblePieSlice extends ConsumableItem {
 
     public void affectConsumer(ItemStack stack, Level worldIn, LivingEntity consumer) {
         int humbleArmor = 20 - consumer.getArmorValue();
-        consumer.addEffect(new MobEffectInstance(ModEffects.COMFORT.get(), 100 + (humbleArmor * 60), 0, false, true));
+        consumer.addEffect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 100 + (humbleArmor * 60), 0, false, false));
         consumer.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60 + (humbleArmor * 30), 1, false, true));
     }
 
@@ -34,7 +34,7 @@ public class HumblePieSlice extends ConsumableItem {
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         if ((Boolean) Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {
             tooltip.add(Component.translatable("irregular_chef.tooltip.eat_humble_pie_slice").withStyle(ChatFormatting.GRAY));
-            tooltip.add(Component.empty().append(" ").append(Component.translatable(ModEffects.COMFORT.get().getDescriptionId()).append(" (1:00)").withStyle(ChatFormatting.BLUE)));
+            tooltip.add(Component.empty().append(" ").append(Component.translatable(ModEffects.NOURISHMENT.get().getDescriptionId()).append(" (1:00)").withStyle(ChatFormatting.BLUE)));
             tooltip.add(Component.empty().append(" ").append(Component.translatable(MobEffects.DAMAGE_RESISTANCE.getDescriptionId()).append(" II (0:30)").withStyle(ChatFormatting.BLUE)));
         }
     }

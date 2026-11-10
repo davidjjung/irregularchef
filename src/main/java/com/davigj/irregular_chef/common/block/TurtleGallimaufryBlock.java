@@ -1,6 +1,5 @@
 package com.davigj.irregular_chef.common.block;
 
-import com.davigj.irregular_chef.core.IrregularChefMod;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -28,14 +27,12 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import vectorwing.farmersdelight.common.block.FeastBlock;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 
 import java.util.function.Supplier;
 
-public class TurtleGallimaufryBlock extends Block implements SimpleWaterloggedBlock {
+public class TurtleGallimaufryBlock extends FeastBlock implements SimpleWaterloggedBlock {
     public static final DirectionProperty FACING;
     public static final IntegerProperty SERVINGS;
     public final Supplier<Item> servingItem;
@@ -44,7 +41,7 @@ public class TurtleGallimaufryBlock extends Block implements SimpleWaterloggedBl
     public static final BooleanProperty WATERLOGGED;
 
     public TurtleGallimaufryBlock(BlockBehaviour.Properties properties, Supplier<Item> servingItem, boolean hasLeftovers) {
-        super(properties);
+        super(properties, servingItem, hasLeftovers);
         this.servingItem = servingItem;
         this.hasLeftovers = hasLeftovers;
         this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH).setValue(SERVINGS, 4).setValue(WATERLOGGED, Boolean.valueOf("false")));

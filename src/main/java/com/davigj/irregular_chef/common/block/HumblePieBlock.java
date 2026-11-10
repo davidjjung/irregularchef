@@ -32,7 +32,7 @@ public class HumblePieBlock extends PieBlock {
             FoodProperties sliceFood = sliceStack.getItem().getFoodProperties();
             playerIn.getFoodData().eat(sliceStack.getItem(), sliceStack);
             int humbleArmor = 20 - playerIn.getArmorValue();
-            playerIn.addEffect(new MobEffectInstance(ModEffects.COMFORT.get(), 100 + (humbleArmor * 60), 0, false, true));
+            playerIn.addEffect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 100 + (humbleArmor * 60), 0, false, true));
             playerIn.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60 + (humbleArmor * 30), 0, false, true));
             if (this.getPieSliceItem().getItem().isEdible() && sliceFood != null) {
                 Iterator var7 = sliceFood.getEffects().iterator();

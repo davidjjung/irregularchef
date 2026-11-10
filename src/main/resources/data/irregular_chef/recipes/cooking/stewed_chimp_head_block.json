@@ -31,8 +31,7 @@
     "item": "irregular_chef:stewed_chimp_head_block"
   },
   "container": {
-    "item": "neapolitan:chimpanzee_head",
-    "damage": "0"
+    "item": "neapolitan:chimpanzee_head"
   },
   "cookingtime": 600,
   "experience": 2.0

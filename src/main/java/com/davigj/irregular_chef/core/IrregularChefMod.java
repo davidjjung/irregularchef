@@ -27,8 +27,8 @@ public class IrregularChefMod {
     public static final String MOD_ID = "irregular_chef";
     public static final RegistryHelper REGISTRY_HELPER = new RegistryHelper(MOD_ID);
 
-    public static final TrackedData<Integer> GLOW_WORMY = TrackedData.Builder.create(DataProcessors.INT, () -> 0).enableSaving().enablePersistence().build();
-    public static final TrackedData<Integer> SWAMP_DOGGY = TrackedData.Builder.create(DataProcessors.INT, () -> 0).enableSaving().enablePersistence().build();
+    public static final TrackedData<Integer> GLOW_WORMY = TrackedData.Builder.create(DataProcessors.INT, () -> 0).enableSaving().build();
+    public static final TrackedData<Integer> SWAMP_DOGGY = TrackedData.Builder.create(DataProcessors.INT, () -> 0).enableSaving().build();
 
     public IrregularChefMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
